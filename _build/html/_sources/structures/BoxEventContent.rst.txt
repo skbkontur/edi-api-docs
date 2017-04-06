@@ -2,30 +2,10 @@ BoxEventContent
 ================
 
  BoxEventContent хранит в себе данные произошедшего события, может иметь один из следующих типов:
- - NewOutboxMessageEventContent;
- - RecognizeMessageEventContent;
- - NewInboxMessageEventContent;
- - MessageDeliveredEventContent;
- - MessageUndeliveredEventContent;
- - MessageReadByPartnerEventContent;
- - MessageCheckingOkEventContent;
- - MessageCheckingFailEventContent;
- - MessageDraftOfDocumentPackagePostedIntoDiadocEventContent;
- - MessageDraftOfDocumentPackageSignedByMeEventContent;
- - MessageDraftOfDocumentPackageDeletedFromDiadocEventContent;
- - MessageDraftOfDocumentPackageSignedBySenderEventContent;
- - MessageReceivedDiadocRoamingErrorEventContent
- - MessageDiadocRevocationAcceptedEventContent
- - MessageDiadocRevocationAcceptedForBuyerEventContent
- - MessageDocumentPackageSignedByMeOkEventContent
- - MessageDocumentPackageSignedByMeFailEventContent
- - MessageDocumentPackageSignedByRecipientOkEventContent
- - MessageDocumentPackageSignedByRecipientFailEventContent
  
  .. toctree::
    :name: events
-   :maxdepth: 1   
-   :caption: События
+   :maxdepth: 1      
  
 	MessageCheckingFailEventContent <events/MessageCheckingFailEventContent>
 	MessageCheckingOkEventContent <events/MessageCheckingOkEventContent>

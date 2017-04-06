@@ -5,6 +5,8 @@ GetBoxDocumentsSettings
 Имя ресурса: /V1/Messages/GetBoxDocumentsSettings
 HTTP метод: GET
 Параметры строки запроса:
+
  - boxId – идентификатор ящика.
+ 
 В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
 В ответе сервер вернет структуру :doc:`BoxDocumentsSettings <../structures/BoxDocumentSettings>`.

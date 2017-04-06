@@ -5,6 +5,8 @@ GetMainApiBox
 Имя ресурса: /V1/Boxes/GetMainApiBox
 HTTP метод: GET
 Параметры строки запроса:
+
  - partyId – идентификатор организации.
+ 
 В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
 В ответе сервер вернет структуру :doc:`BoxInfo <../structures/BoxInfo>`.

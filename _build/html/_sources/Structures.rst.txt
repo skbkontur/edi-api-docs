@@ -28,7 +28,6 @@
 	DocumentSettings <structures/DocumentSettings>
 	DocumentSettingsForPartner <structures/DocumentSettingsForPartner>
 	ForeignAddressInfo <structures/ForeignAddressInfo>
-	GetPartyInfo <structures/GetPartyInfo>
 	InboxMessageEntity <structures/InboxMessageEntity>
 	InboxMessageMeta <structures/InboxMessageMeta>
 	IPInfo <structures/IPInfo>

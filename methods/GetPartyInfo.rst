@@ -5,6 +5,8 @@ GetPartyInfo
 Имя ресурса: /V1/Parties/GetPartyInfo
 HTTP метод: GET
 Параметры строки запроса:
+
  - partyId – идентификатор организации.
+ 
 В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
 В ответе сервер вернет структуру :doc:`PartyInfo <../structures/PartyInfo>`.
