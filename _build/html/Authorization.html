@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Авторизация &mdash; Документация docsTest 1.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация docsTest 1.0.1" href="index.html"/>
+        <link rel="next" title="Поддерживаемые операции" href="Methods.html"/>
+        <link rel="prev" title="Модель данных" href="DataModel.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docsTest
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="DataModel.html">Модель данных</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Авторизация</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methods.html">Поддерживаемые операции</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Structures.html">Структуры данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enums.html">Перечисления</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docsTest</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Авторизация</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Authorization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Авторизация<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Большинству команд API требуется авторизация. Для этого команды требуют в качестве обязательного параметра так называемый авторизационный токен — массив байтов, однозначно идентифицирующий пользователя. Кроме того, во все методы интеграторского интерфейса требуется передавать так называемый &#8220;ключ разработчика&#8221; — уникальный строковый идентификатор интегратора. Интегратор не должен передавать свой &#8220;ключ разработчика&#8221; третьим лицам.
+Для передачи авторизационной информации с каждым запросом используется стандатрный HTTP-заголовок Authorization. Схема аутентификации, используемая системой EDI.Контур, называется KonturEdiAuth. Для нее определены следующие параметры:</p>
+<blockquote>
+<div><ul class="simple">
+<li>konturediauth_api_client_id служит для передачи ключа разработчика;</li>
+<li>konturediauth_token служит для передачи авторизационного токена;</li>
+<li>konturediauth_login служит для передачи логина (используется только в момент получения авторизационного токена);</li>
+<li>konturediauth_password служит для передачи пароля (используется только в момент получения авторизационного токена).</li>
+</ul>
+</div></blockquote>
+<p>Значения параметров отделяются от их имен символами &#8216;=&#8217;. Параметры разделяются символами &#8216;,&#8217;. Например:</p>
+<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="n">Authorization</span><span class="p">:</span> <span class="n">KonturEdiAuth</span> <span class="n">konturediauth_api_client_id</span><span class="p">=</span><span class="n">testClient</span><span class="p">-</span><span class="m">8</span><span class="n">ee1638deae84c86b8e2069955c2825a</span><span class="p">,</span>   <span class="n">konturediauth_token</span><span class="p">=</span><span class="m">3</span><span class="n">IU0iPhuhHPZ6lrlumGz4pICEedhQ1XmlMN1Pk8z0DJ51MXkcTi6Q3CODCC4xTMsjPFfhK6XM4kCJ4JJ42hlD499</span><span class="p">/</span><span class="n">Ui5WSq6lrPwcdp4IIKswVUwyE0ZiwhlpeOwRjNrvUX1yPrxr0dY8a0w8ePsc1DG8HAlZce8a0hZiWylMqu23d</span><span class="p">/</span><span class="n">vfzRFuA</span><span class="p">==</span>
+</pre></div>
+</div>
+<p>Таким образом, общая последовательность действий, которые требуется совершить при обращении к функциям интеграторского интерфейса, следующая:
+1. Получить авторизационный токен, отправив запрос на сервер и передав ключ разработчика, а также логин и пароль пользователя с помощью команды Authenticate.
+2. Во все остальные методы передавать кроме ключа разработчика авторизационный токен.
+Следует учитывать, что авторизационный токен действителен в течение некоторого времени. Это означает, что его можно (и нужно) кешировать, но при этом уметь обрабатывать ситуацию устаревания токена. В этом случае сервер вернет HTTP-код 401 (Unauthorized), а клиент должен запросить токен вновь.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Methods.html" class="btn btn-neutral float-right" title="Поддерживаемые операции" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DataModel.html" class="btn btn-neutral" title="Модель данных" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ivan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

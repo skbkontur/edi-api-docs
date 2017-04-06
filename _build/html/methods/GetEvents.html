@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GetEvents &mdash; Документация docsTest 1.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация docsTest 1.0.1" href="../index.html"/>
+        <link rel="up" title="Поддерживаемые операции" href="../Methods.html"/>
+        <link rel="next" title="GetEventsFrom" href="GetEventsFrom.html"/>
+        <link rel="prev" title="GetBoxesInfo" href="GetBoxesInfo.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> docsTest
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../DataModel.html">Модель данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authorization.html">Авторизация</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Methods.html">Поддерживаемые операции</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Authenticate.html">             Authenticate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetAccessiblePartiesInfo.html">             GetAccessiblePartiesInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetBoxDocumentsSettings.html">             GetBoxDocumentsSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetBoxesInfo.html">             GetBoxesInfo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">             GetEvents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetEventsFrom.html">             GetEventsFrom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetInboxMessage.html">             GetInboxMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetMainApiBox.html">             GetMainApiBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetOrganizationCatalogueInfo.html">             GetOrganizationCatalogueInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetOutboxMessage.html">             GetOutboxMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetPartyInfo.html">             GetPartyInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GetUsersInfo.html">             GetUsersInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SendMessage.html">             SendMessage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Structures.html">Структуры данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Enums.html">Перечисления</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">docsTest</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../Methods.html">Поддерживаемые операции</a> &raquo;</li>
+        
+      <li>GetEvents</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/methods/GetEvents.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getevents">
+<h1>GetEvents<a class="headerlink" href="#getevents" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Метод для получения всех событий в ящике.
+Имя ресурса: /V1/Messages/GetEvents
+HTTP метод: GET
+Параметры строки запроса:</p>
+<blockquote>
+<div><ul class="simple">
+<li>boxId – идентификатор ящика;</li>
+<li>exclusiveEventId – идентификатор последнего полученного события. Должно быть пусто, если еще не было вычитано ни одного события. Метод вернет события, произошедшие строго после события с идентификатором exclusiveEventId;</li>
+<li>count – количество запрашиваемых событий. Необязательно. Должно быть в пределах от 1 до 1000. Сервер вернет count событий или меньше. Если не передано, то по умолчанию равно 100.</li>
+</ul>
+</div></blockquote>
+<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+В ответе сервер вернет структуру <a class="reference internal" href="../structures/BoxEventBatch.html"><span class="doc">BoxEventBatch</span></a>. Для следующего вызова метода необходимо использовать значение поля LastEventId, которое присутствует в ответе.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GetEventsFrom.html" class="btn btn-neutral float-right" title="GetEventsFrom" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GetBoxesInfo.html" class="btn btn-neutral" title="GetBoxesInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ivan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

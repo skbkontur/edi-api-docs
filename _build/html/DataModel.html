@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Модель данных &mdash; Документация docsTest 1.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация docsTest 1.0.1" href="index.html"/>
+        <link rel="next" title="Авторизация" href="Authorization.html"/>
+        <link rel="prev" title="Документация по API Контур.EDI" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docsTest
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модель данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authorization.html">Авторизация</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methods.html">Поддерживаемые операции</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Structures.html">Структуры данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Enums.html">Перечисления</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docsTest</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Модель данных</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/DataModel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Модель данных<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Единицей маршрутизации в системе EDI.Контур являются ящики (box). Когда пользователь системы хочет отправить EDI-документ своему контрагенту, он формирует документ в своем ящике (назовем его ящиком отправителя), а система выполняет доставку путем формирования соответствующего документа в ящике контрагента (ящике получателя). Ящик может быть настроен таким образом, что после появления документа в нем происходит его физическая отправка по какому-либо протоколу (пример: FTP, AS2).
+Каждый ящик в системе EDI.Контур относится к некоторой организации (юридическое лицо или индивидуальный предприниматель). Ящики в системе закрепляются за организациями таким образом, что каждый ящик принадлежит одной и только одной организации.
+Пользователи системы EDI.Контур могут аутентифицироваться в системе по паре логин/пароль. Разграничение доступа аутентифицированных пользователей производится на уровне ящиков. К одному ящику могут получить доступ несколько пользователей и, наоборот, один пользователь может получить доступ сразу к нескольким ящикам. Доступ пользователя к ящику подразумевает возможность просматривать имеющиеся в нем документы и отправлять из него документы в ящики контрагентов.
+Обмен документами производится в системе EDI.Контур в виде сообщений. Ящик представляет собой логический контейнер для хранения всех сообщений как отправленных из этого ящика, так и полученных в этот ящик. Для просмотра всех сообщений внутри ящика, а также для отслеживания их статусов, используется механизм событий. Ящик можно представлять как непрерывный поток событий, каждое из которых привязано к некоторому сообщению. Приведем список основных типов событий:</p>
+<blockquote>
+<div><ul class="simple">
+<li>в ящик доставлено новое входящее сообщение;</li>
+<li>из ящика отправлено новое исходящее сообщение;</li>
+<li>исходящее сообщение доставлено в ящик контрагента;</li>
+<li>исходящее сообщение не доставлено в ящик контрагента (по причине какой-то ошибки);</li>
+<li>исходящее сообщение прочитано контрагентом;</li>
+<li>исходящее сообщение прошло проверку на стороне получателя;</li>
+<li>исходящее сообщение не прошло проверку на стороне получателя;</li>
+<li>на основании исходящеге сообщения Invoic сформированы черновики счета-фактуры, ТОРГ-12 в Диадоке;</li>
+<li>черновики счета-фактуры, ТОРГ-12, сформированные на основании исходящего Invoic, подписаны и отправлены через Диадок;</li>
+<li>черновики исходящих счета-фактуры, ТОРГ-12, сформированные на основании исходящего сообщения Invoic, удалены в Диадоке;</li>
+<li>счет-фактура, ТОРГ-12, сформированные на основании входящего сообщения Invoic, подписаны отправителем и доставлены через Диадок;</li>
+<li>в счете-фактуре, ТОРГ-12, сформированных на основании исходящего Invoic, были обнаружены ошибки на стороне получателя;</li>
+<li>счет-фактура, ТОРГ-12 аннулированы.</li>
+</ul>
+</div></blockquote>
+<p>Таким образом, для интеграции с системой необходимо постоянно запрашивать информацию о новых событиях в ящике и реагировать на них (например, формировать ответные сообщения на входящие или отображать состояния отправленных сообщений).</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Authorization.html" class="btn btn-neutral float-right" title="Авторизация" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Документация по API Контур.EDI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ivan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

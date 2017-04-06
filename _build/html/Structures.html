@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Структуры данных &mdash; Документация docsTest 1.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация docsTest 1.0.1" href="index.html"/>
+        <link rel="next" title="BankAccount" href="structures/BankAccount.html"/>
+        <link rel="prev" title="SendMessage" href="methods/SendMessage.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docsTest
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="DataModel.html">Модель данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authorization.html">Авторизация</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Methods.html">Поддерживаемые операции</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Структуры данных</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxesInfo.html">     BoxesInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxEvent.html">     BoxEvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxEventBatch.html">     BoxEventBatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxEventContent.html">     BoxEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxInfo.html">     BoxInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BoxSettings.html">     BoxSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/ContactInformation.html">     ContactInformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/DiadocUrls.html">     DiadocUrls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/DocumentDetails.html">     DocumentDetails</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/DocumentSettings.html">     DocumentSettings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/DocumentSettingsForPartner.html">     DocumentSettingsForPartner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/ForeignAddressInfo.html">     ForeignAddressInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/InboxMessageEntity.html">     InboxMessageEntity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/InboxMessageMeta.html">     InboxMessageMeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/IPInfo.html">     IPInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/MessageData.html">     MessageData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/Organization.html">     Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/OrganizationInfo.html">     OrganizationInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/OutboxMessageMeta.html">     OutboxMessageMeta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/Parties.html">     Parties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/PartiesInfo.html">     PartiesInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/Partner.html">     Partner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/PartyAddress.html">     PartyAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/PartyInfo.html">     PartyInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/RussianAddressInfo.html">     RussianAddressInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/RussianPartyInfo.html">     RussianPartyInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/ULInfo.html">     ULInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/UserInfo.html">     UserInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/UsersInfo.html">     UsersInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Enums.html">Перечисления</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docsTest</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Структуры данных</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Structures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Структуры данных<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="docutils">
+<dt>Для описания структур используется понятие класса. Класс – объединение других классов или примитивных типов. Под примитивными типами понимается следующие типы:</dt>
+<dd><ul class="first simple">
+<li>enum – перечисление. Фиксированный набор значений. Сериализуется как строка, по написанию равная одному из значений;</li>
+<li>int – целое число;</li>
+<li>string – строка;</li>
+<li>dateTime – дата и время. Сериализуется в строку согласно формату ISO 8601 (например: 2008-04-12T12:53Z);</li>
+<li>byte[] – массив байтов. Сериализуется в base64-строку;</li>
+<li>bool – логический тип.</li>
+</ul>
+<div class="toctree-wrapper last compound" id="structures">
+<p class="caption"><span class="caption-text">Структуры данных</span><a class="headerlink" href="#structures" title="Постоянная ссылка на оглавление">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxesInfo.html">     BoxesInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxEvent.html">     BoxEvent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxEventBatch.html">     BoxEventBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxEventContent.html">     BoxEventContent</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageCheckingFailEventContent.html">     MessageCheckingFailEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageCheckingOkEventContent.html">     MessageCheckingOkEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDeliveredEventContent.html">     MessageDeliveredEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDiadocRevocationAcceptedEventContent.html">     MessageDiadocRevocationAcceptedEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDiadocRevocationAcceptedForBuyerEventContent.html">     MessageDiadocRevocationAcceptedForBuyerEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByMeFailEventContent.html">     MessageDocumentPackageSignedByMeFailEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByMeOkEventContent.html">     MessageDocumentPackageSignedByMeOkEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByRecipientFailEventContent.html">     MessageDocumentPackageSignedByRecipientFailEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByRecipientOkEventContent.html">     MessageDocumentPackageSignedByRecipientOkEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageDeletedFromDiadocEventContent.html">     MessageDraftOfDocumentPackageDeletedFromDiadocEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackagePostedIntoDiadocEventContent.html">     MessageDraftOfDocumentPackagePostedIntoDiadocEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageSignedByMeEventContent.html">     MessageDraftOfDocumentPackageSignedByMeEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageSignedBySenderEventContent.html">     MessageDraftOfDocumentPackageSignedBySenderEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageReadByPartnerEventContent.html">     MessageReadByPartnerEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageReceivedDiadocRoamingErrorEventContent.html">     MessageReceivedDiadocRoamingErrorEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageUndeliveredEventContent.html">     MessageUndeliveredEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/events/RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxInfo.html">     BoxInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/BoxSettings.html">     BoxSettings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/ContactInformation.html">     ContactInformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/DiadocUrls.html">     DiadocUrls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/DocumentDetails.html">     DocumentDetails</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/DocumentSettings.html">     DocumentSettings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/DocumentSettingsForPartner.html">     DocumentSettingsForPartner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/ForeignAddressInfo.html">     ForeignAddressInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/InboxMessageEntity.html">     InboxMessageEntity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/InboxMessageMeta.html">     InboxMessageMeta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/IPInfo.html">     IPInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/MessageData.html">     MessageData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/Organization.html">     Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/OrganizationInfo.html">     OrganizationInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/OutboxMessageMeta.html">     OutboxMessageMeta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/Parties.html">     Parties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/PartiesInfo.html">     PartiesInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/Partner.html">     Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/PartyAddress.html">     PartyAddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/PartyInfo.html">     PartyInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/RussianAddressInfo.html">     RussianAddressInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/RussianPartyInfo.html">     RussianPartyInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/ULInfo.html">     ULInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/UserInfo.html">     UserInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structures/UsersInfo.html">     UsersInfo</a></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structures/BankAccount.html" class="btn btn-neutral float-right" title="BankAccount" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="methods/SendMessage.html" class="btn btn-neutral" title="SendMessage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Ivan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
