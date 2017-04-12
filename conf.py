@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'API Контур.EDI'
+project = u'API Контур.EDI'
 author = 'Someone'
 
 # The version info for the project you're documenting, acts as replacement for
