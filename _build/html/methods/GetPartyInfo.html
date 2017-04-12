@@ -237,16 +237,16 @@
             
   <div class="section" id="getpartyinfo">
 <h1>GetPartyInfo<a class="headerlink" href="#getpartyinfo" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Метод для получения реквизитов организации. Если у пользователя нет прав доступа к организации, то сервер вернет HTTP-код 403 (Forbidden).
-Имя ресурса: /V1/Parties/GetPartyInfo
-HTTP метод: GET
-Параметры строки запроса:</p>
+<p>Метод для получения реквизитов организации. Если у пользователя нет прав доступа к организации, то сервер вернет HTTP-код 403 (Forbidden).</p>
+<p>Имя ресурса: <strong>/V1/Parties/GetPartyInfo</strong></p>
+<p>HTTP метод: <strong>GET</strong></p>
+<p>Параметры строки запроса:</p>
 <blockquote>
 <div><ul class="simple">
 <li>partyId – идентификатор организации.</li>
 </ul>
 </div></blockquote>
-<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+<p>В запросе должен присутствовать HTTP-заголовок <code class="docutils literal"><span class="pre">Authorization</span></code> с необходимыми данными для авторизации.
 В ответе сервер вернет структуру <a class="reference internal" href="../structures/PartyInfo.html"><span class="doc">PartyInfo</span></a>.</p>
 </div>
 

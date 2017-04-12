@@ -8,4 +8,5 @@ NewInboxMessageEventContent
 	}
 	
 Информация о новом событии - получении входящего сообщения. Соответствует BoxEventType = NewInboxMessage.
+
  - InboxMessageMeta – :doc:`метаинформация <../../structures/InboxMessageMeta>` сообщения.

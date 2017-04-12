@@ -8,4 +8,5 @@ Parties
 	}
 	
 Список организаций:
+
  - PartyInfo – :doc:`реквизиты организации <../structures/PartyInfo>`.

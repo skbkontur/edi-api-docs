@@ -8,4 +8,5 @@ UsersInfo
 	}
 	
 Информация о списке пользователей:
+
  - Users – список :doc:`пользователей <../structures/UserInfo>`.

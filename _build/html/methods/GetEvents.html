@@ -237,10 +237,10 @@
             
   <div class="section" id="getevents">
 <h1>GetEvents<a class="headerlink" href="#getevents" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Метод для получения всех событий в ящике.
-Имя ресурса: /V1/Messages/GetEvents
-HTTP метод: GET
-Параметры строки запроса:</p>
+<p>Метод для получения всех событий в ящике.</p>
+<p>Имя ресурса: <strong>/V1/Messages/GetEvents</strong></p>
+<p>HTTP метод: <strong>GET</strong></p>
+<p>Параметры строки запроса:</p>
 <blockquote>
 <div><ul class="simple">
 <li>boxId – идентификатор ящика;</li>
@@ -248,7 +248,7 @@ HTTP метод: GET
 <li>count – количество запрашиваемых событий. Необязательно. Должно быть в пределах от 1 до 1000. Сервер вернет count событий или меньше. Если не передано, то по умолчанию равно 100.</li>
 </ul>
 </div></blockquote>
-<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+<p>В запросе должен присутствовать HTTP-заголовок <code class="docutils literal"><span class="pre">Authorization</span></code> с необходимыми данными для авторизации.
 В ответе сервер вернет структуру <a class="reference internal" href="../structures/BoxEventBatch.html"><span class="doc">BoxEventBatch</span></a>. Для следующего вызова метода необходимо использовать значение поля LastEventId, которое присутствует в ответе.</p>
 </div>
 

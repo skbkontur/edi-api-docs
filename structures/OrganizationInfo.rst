@@ -16,6 +16,7 @@ OrganizationInfo
 	}
 	
 Реквизиты и адрес организации или точки доставки/отгрузки:
+
  - Gln – Gln.
  - PartyAddress – :doc:`адрес <../structures/PartyAddress>`.
  - RussianPartyInfo – :doc:`реквизиты <../structures/RussianPartyInfo>`.

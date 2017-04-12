@@ -8,4 +8,5 @@ PartiesInfo
 	}
 	
 Информация об организациях:
+
  - Parties – :doc:`список организаций <../structures/Parties>`.

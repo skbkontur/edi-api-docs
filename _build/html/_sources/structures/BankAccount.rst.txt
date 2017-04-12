@@ -9,7 +9,9 @@ BankAccount
 		BankName: string
 	}
 
+	
 Банковские реквизиты:
+
  - BankAccountNumber – расчётный счёт.
  - CorrespondentAccountNumber – корр. счёт.
  - BankId – БИК банка.

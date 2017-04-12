@@ -16,6 +16,7 @@ MessageDiadocRevocationAcceptedForBuyerEventContent
 	}
 	
 Информация о новом событии в ящике получателя - успешном аннулировании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic. Соответствует BoxEventType = DiadocRevocationAcceptedForBuyer.
+
  - AcceptedRevocationInfo – информация об аннулированном документе.
  - DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.
  - InvoiceId – идентификатор пришедшего счета-фактуры.

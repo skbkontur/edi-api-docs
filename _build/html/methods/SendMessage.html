@@ -237,16 +237,16 @@
             
   <div class="section" id="sendmessage">
 <h1>SendMessage<a class="headerlink" href="#sendmessage" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Метод для отправки сообщения.
-Имя ресурса: /V1/Messages/SendMessage
-HTTP метод: POST
-Параметры строки запроса:</p>
+<p>Метод для отправки сообщения.</p>
+<p>Имя ресурса: <strong>/V1/Messages/SendMessage</strong></p>
+<p>HTTP метод: <strong>POST</strong></p>
+<p>Параметры строки запроса:</p>
 <blockquote>
 <div><ul class="simple">
 <li>boxId – идентификатор ящика.</li>
 </ul>
 </div></blockquote>
-<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+<p>В запросе должен присутствовать HTTP-заголовок <code class="docutils literal"><span class="pre">Authorization</span></code> с необходимыми данными для авторизации.
 В теле запроса должен быть передан массив байт – содержимое сообщения.
 В ответе сервер вернет структуру <a class="reference internal" href="../structures/OutboxMessageMeta.html"><span class="doc">OutboxMessageMeta</span></a>, которая идентифицирует исходящее сообщение.</p>
 </div>

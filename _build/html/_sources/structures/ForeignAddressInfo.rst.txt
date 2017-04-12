@@ -9,5 +9,6 @@ ForeignAddressInfo
 	}
 	
 Иностранный адрес:
+
  - CountryCode – двухбуквенный код страны, согласно ISO 3166.
  - Address – адрес.

@@ -237,17 +237,17 @@
             
   <div class="section" id="getinboxmessage">
 <h1>GetInboxMessage<a class="headerlink" href="#getinboxmessage" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Метод для получения содержимого входящего сообщения.
-Имя ресурса: /V1/Messages/GetInboxMessage
-HTTP метод: GET
-Параметры строки запроса:</p>
+<p>Метод для получения содержимого входящего сообщения.</p>
+<p>Имя ресурса: <strong>/V1/Messages/GetInboxMessage</strong></p>
+<p>HTTP метод: <strong>GET</strong></p>
+<p>Параметры строки запроса:</p>
 <blockquote>
 <div><ul class="simple">
 <li>boxId – идентификатор ящика;</li>
 <li>messageId – идентификатор сообщения.</li>
 </ul>
 </div></blockquote>
-<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+<p>В запросе должен присутствовать HTTP-заголовок <code class="docutils literal"><span class="pre">Authorization</span></code> с необходимыми данными для авторизации.
 В ответе сервер вернет структуру <a class="reference internal" href="../structures/InboxMessageEntity.html"><span class="doc">InboxMessageEntity</span></a>.</p>
 </div>
 

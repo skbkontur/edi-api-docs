@@ -15,6 +15,7 @@ MessageDraftOfDocumentPackageSignedBySenderEventContent
 	}
 	
 Информация о новом событии в ящике получателя - подписании и отправке черновиков счета-фактуры, ТОРГ-12, УПД, сформированных на основании входящего Invoic. Соответствует BoxEventType = DraftOfDocumentPackageSignedBySender.
+
  - InboxMessageMeta – :doc:`метаинформация <../../structures/InboxMessageMeta>` полученного сообщения Invoic.
  - DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.
  - InvoiceId – идентификатор пришедшего счета-фактуры.

@@ -11,6 +11,7 @@ IPInfo
 	}
 	
 Реквизиты физического лица:
+
  - Inn – ИНН.
  - FirstName – имя.
  - MiddleName – отчество.

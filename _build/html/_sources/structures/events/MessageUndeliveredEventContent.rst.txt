@@ -9,5 +9,6 @@ MessageUndeliveredEventContent
 	}
 	
 Информация о новом событии - ошибке доставки исходящего сообщения получателю. Соответствует BoxEventType = MessageUndelivered.
+
  - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` недоставленного сообщения.
  - MessageUndeliveryReasons – описание причин, по которым сообщение не доставлено.

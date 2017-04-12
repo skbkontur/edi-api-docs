@@ -238,8 +238,8 @@
   <div class="section" id="geteventsfrom">
 <h1>GetEventsFrom<a class="headerlink" href="#geteventsfrom" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Метод для получения событий в ящике, произошедших после определенного момента времени.</p>
-<p>Имя ресурса: /V1/Messages/GetEventsFrom</p>
-<p>HTTP метод: GET</p>
+<p>Имя ресурса: <strong>/V1/Messages/GetEventsFrom</strong></p>
+<p>HTTP метод: <strong>GET</strong></p>
 <p>Параметры строки запроса:</p>
 <blockquote>
 <div><ul class="simple">
@@ -248,7 +248,7 @@
 <li>count – количество запрашиваемых событий. Необязательно. Должно быть в пределах от 1 до 1000. Сервер вернет count событий или меньше. Если не передано, то по умолчанию равно 100.</li>
 </ul>
 </div></blockquote>
-<p>В запросе должен присутствовать HTTP-заголовок Authorization с необходимыми данными для авторизации.
+<p>В запросе должен присутствовать HTTP-заголовок <code class="docutils literal"><span class="pre">Authorization</span></code> с необходимыми данными для авторизации.
 В ответе сервер вернет структуру <a class="reference internal" href="../structures/BoxEventBatch.html"><span class="doc">BoxEventBatch</span></a>. Для следующего вызова следует использовать метод <a class="reference internal" href="GetEvents.html"><span class="doc">GetEvents</span></a> и поле LastEventId, присутствующее в ответе.</p>
 </div>
 

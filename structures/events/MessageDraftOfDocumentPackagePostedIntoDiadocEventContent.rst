@@ -15,6 +15,7 @@ MessageDraftOfDocumentPackagePostedIntoDiadocEventContent
 	}
 
 Информация о новом событии - формировании на основе исходящего Invoic черновиков счета-фактуры, ТОРГ-12 в Диадоке. Соответствует BoxEventType = DraftOfDocumentPackagePostedIntoDiadoc.
+
  - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` отправленного сообщения Invoic.
  - DiadocBoxId – идентификатор ящика в Диадоке, в котором сформированы черновики документов.
  - InvoiceId – идентификатор черновика счета-фактуры.

@@ -15,6 +15,7 @@ RussianAddressInfo
 	}
 	
 Российский адрес:
+
  - PostalCode – почтовый индекс.
  - RegionCode – код региона.
  - District – район.

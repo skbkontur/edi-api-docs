@@ -11,6 +11,7 @@ DocumentDetails
 	}
 	
 Информация о документе:
+
  - DocumentType – :doc:`тип документа <../enums/DocumentType>`.
  - DocumentIsTest – флаг, показывающий, что данный документ является тестовым.
  - DocumentNumber – номер документа.

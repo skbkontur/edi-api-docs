@@ -9,5 +9,6 @@ OrganizationCatalogueInfo
 	}
 	
 Информация о структуре организации:
+
  - Organizations – связанные :doc:`юридические лица и/или индивидуальные предприниматели <../structures/Organization>`;
  - DeliveryPoints – :doc:`точки доставки/отгрузки <../structures/Organization>`.

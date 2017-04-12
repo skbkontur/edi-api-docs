@@ -8,4 +8,5 @@ MessageDeliveredEventContent
 	}
 	
 Информация о новом событии - доставке исходящего сообщения получателю. Соответствует BoxEventType = MessageDelivered.
+
  - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` доставленного сообщения.
