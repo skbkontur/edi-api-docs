@@ -34,3 +34,5 @@ goto end
 
 :end
 popd
+
+move _build/html docs
