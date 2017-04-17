@@ -35,4 +35,6 @@ goto end
 :end
 popd
 
+rd /s /q docs
 move _build/html docs
+echo. 2>docs/.nojekyll
