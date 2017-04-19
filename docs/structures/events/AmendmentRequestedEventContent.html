@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MessageDocumentPackageSignedByMeOkEventContent &mdash; Документация API Контур.EDI </title>
+  <title>AmendmentRequestedEventContent &mdash; Документация API Контур.EDI </title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Поиск" href="../../search.html"/>
     <link rel="top" title="Документация API Контур.EDI " href="../../index.html"/>
         <link rel="up" title="BoxEventContent" href="../BoxEventContent.html"/>
-        <link rel="next" title="MessageDocumentPackageSignedByRecipientFailEventContent" href="MessageDocumentPackageSignedByRecipientFailEventContent.html"/>
-        <link rel="prev" title="MessageDocumentPackageSignedByMeFailEventContent" href="MessageDocumentPackageSignedByMeFailEventContent.html"/> 
+        <link rel="next" title="BoxInfo" href="../BoxInfo.html"/>
+        <link rel="prev" title="RecognizeMessageEventContent" href="RecognizeMessageEventContent.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -125,7 +125,7 @@
 <li class="toctree-l3"><a class="reference internal" href="MessageDiadocRevocationAcceptedEventContent.html">     MessageDiadocRevocationAcceptedEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MessageDiadocRevocationAcceptedForBuyerEventContent.html">     MessageDiadocRevocationAcceptedForBuyerEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MessageDocumentPackageSignedByMeFailEventContent.html">     MessageDocumentPackageSignedByMeFailEventContent</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">     MessageDocumentPackageSignedByMeOkEventContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MessageDocumentPackageSignedByMeOkEventContent.html">     MessageDocumentPackageSignedByMeOkEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MessageDocumentPackageSignedByRecipientFailEventContent.html">     MessageDocumentPackageSignedByRecipientFailEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MessageDocumentPackageSignedByRecipientOkEventContent.html">     MessageDocumentPackageSignedByRecipientOkEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MessageDraftOfDocumentPackageDeletedFromDiadocEventContent.html">     MessageDraftOfDocumentPackageDeletedFromDiadocEventContent</a></li>
@@ -138,7 +138,7 @@
 <li class="toctree-l3"><a class="reference internal" href="NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="AmendmentRequestedEventContent.html">     AmendmentRequestedEventContent</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">     AmendmentRequestedEventContent</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxInfo.html">     BoxInfo</a></li>
@@ -226,7 +226,7 @@
         
           <li><a href="../BoxEventContent.html">BoxEventContent</a> &raquo;</li>
         
-      <li>MessageDocumentPackageSignedByMeOkEventContent</li>
+      <li>AmendmentRequestedEventContent</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -243,9 +243,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="messagedocumentpackagesignedbymeokeventcontent">
-<h1>MessageDocumentPackageSignedByMeOkEventContent<a class="headerlink" href="#messagedocumentpackagesignedbymeokeventcontent" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MessageDocumentPackageSignedByMeOkEventContent</span> <span class="p">{</span>
+  <div class="section" id="amendmentrequestedeventcontent">
+<h1>AmendmentRequestedEventContent<a class="headerlink" href="#amendmentrequestedeventcontent" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AmendmentRequestedEventContent</span> <span class="p">{</span>
+        <span class="n">AmendmentRequestMessage</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">DiadocBoxId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">InvoiceId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">MessageId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
@@ -254,22 +255,23 @@
         <span class="n">UniversalTransferDocumentId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">UniversalCorrectionDocumentId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">DiadocUrls</span><span class="p">:</span> <span class="n">DiadocUrls</span><span class="p">,</span>
-        <span class="n">InboxMessageMeta</span><span class="p">:</span> <span class="n">BasicMessageMeta</span>
+        <span class="n">MessageMeta</span><span class="p">:</span> <span class="n">BasicMessageMeta</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Информация о новом событии в ящике получателя - успешном подписании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.</p>
+<p>Информация о новом событии в ящике - поступлении уведомления об уточнении документа, сформированного на основании исходящего Invoic. Соответствует BoxEventType = AmendmentRequested.</p>
 <blockquote>
 <div><ul class="simple">
+<li>AmendmentRequestMessage – текст уведомления об уточнении.</li>
 <li>DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.</li>
 <li>InvoiceId – идентификатор пришедшего счета-фактуры.</li>
 <li>MessageId – идентификатор сообщения в Диадоке.</li>
 <li>Torg12Id – идентификатор пришедшей ТОРГ-12.</li>
 <li>InvoiceCorrectionId – идентификатор пришедшего корректировочного счета-фактуры.</li>
 <li>UniversalTransferDocumentId – идентификатор пришедшего УПД.</li>
-<li>UniversalCorrectionDocumentId – идентификатор пришедшего УKД.</li>
+<li>UniversalCorrectionDocumentId – идентификатор пришедшего УКД.</li>
 <li>DiadocUrls – <a class="reference internal" href="../DiadocUrls.html"><span class="doc">ссылки на документы в Диадоке</span></a>.</li>
-<li>InboxMessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> входящего сообщения Invoic.</li>
+<li>MessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> сообщения Invoic.</li>
 </ul>
 </div></blockquote>
 </div>
@@ -284,10 +286,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="MessageDocumentPackageSignedByRecipientFailEventContent.html" class="btn btn-neutral float-right" title="MessageDocumentPackageSignedByRecipientFailEventContent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../BoxInfo.html" class="btn btn-neutral float-right" title="BoxInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="MessageDocumentPackageSignedByMeFailEventContent.html" class="btn btn-neutral" title="MessageDocumentPackageSignedByMeFailEventContent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="RecognizeMessageEventContent.html" class="btn btn-neutral" title="RecognizeMessageEventContent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

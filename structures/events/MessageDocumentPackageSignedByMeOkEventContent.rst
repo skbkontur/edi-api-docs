@@ -11,7 +11,8 @@ MessageDocumentPackageSignedByMeOkEventContent
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
-		DiadocUrls: DiadocUrls
+		DiadocUrls: DiadocUrls,
+		InboxMessageMeta: BasicMessageMeta
 	}
 	
 Информация о новом событии в ящике получателя - успешном подписании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.
@@ -24,3 +25,4 @@ MessageDocumentPackageSignedByMeOkEventContent
  - UniversalTransferDocumentId – идентификатор пришедшего УПД.
  - UniversalCorrectionDocumentId – идентификатор пришедшего УKД.
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
+ - InboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` входящего сообщения Invoic.

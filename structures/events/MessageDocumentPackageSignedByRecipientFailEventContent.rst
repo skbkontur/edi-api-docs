@@ -11,7 +11,8 @@ MessageDocumentPackageSignedByRecipientFailEventContent
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
-		DiadocUrls: DiadocUrls
+		DiadocUrls: DiadocUrls,
+		OutboxMessageMeta: BasicMessageMeta
 	}
 	
 Информация о новом событии в ящике отправителя - отказе в подписи ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientFail.
@@ -24,3 +25,4 @@ MessageDocumentPackageSignedByRecipientFailEventContent
  - UniversalTransferDocumentId – идентификатор отправленного УПД.
  - UniversalCorrectionDocumentId – идентификатор отправленного УKД.
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic.

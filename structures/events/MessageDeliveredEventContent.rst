@@ -4,9 +4,9 @@ MessageDeliveredEventContent
 .. code-block:: c#
 
 	class MessageDeliveredEventContent {
-		OutboxMessageMeta: OutboxMessageMeta
+		OutboxMessageMeta: BasicMessageMeta
 	}
 	
 Информация о новом событии - доставке исходящего сообщения получателю. Соответствует BoxEventType = MessageDelivered.
 
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` доставленного сообщения.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` доставленного сообщения.

@@ -10,5 +10,5 @@ OutboxMessageEntity
 	
 Исходящее сообщение:
 
- - Meta – :doc:`метаинформация <../structures/OutboxMessageMeta>` исходящего сообщения.
+ - Meta – :doc:`метаинформация <../structures/BasicMessageMeta>` исходящего сообщения.
  - Data – :doc:`данные <../structures/MessageData>` исходящего сообщения.

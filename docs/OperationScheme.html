@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Авторизация &mdash; Документация API Контур.EDI </title>
+  <title>Порядок работы с API &mdash; Документация API Контур.EDI </title>
   
 
   
@@ -88,7 +88,12 @@
               <p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="DataModel.html">Модель данных</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Авторизация</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Порядок работы с API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Авторизация</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Предварительные настройки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-api">Cхема разового обращения к API</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Methods.html">Поддерживаемые операции</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="methods/Authenticate.html">             Authenticate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="methods/GetAccessiblePartiesInfo.html">             GetAccessiblePartiesInfo</a></li>
@@ -107,6 +112,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Structures.html">Структуры данных</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxesInfo.html">     BoxesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxEvent.html">     BoxEvent</a></li>
@@ -131,6 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structures/events/NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structures/events/NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structures/events/RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures/events/AmendmentRequestedEventContent.html">     AmendmentRequestedEventContent</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxInfo.html">     BoxInfo</a></li>
@@ -149,7 +156,6 @@
 <li class="toctree-l2"><a class="reference internal" href="structures/OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/OrganizationInfo.html">     OrganizationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/OutboxMessageMeta.html">     OutboxMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/Parties.html">     Parties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/PartiesInfo.html">     PartiesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/Partner.html">     Partner</a></li>
@@ -215,7 +221,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Авторизация</li>
+      <li>Порядок работы с API</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -232,8 +238,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>Авторизация<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+  <div class="section" id="api">
+<h1>Порядок работы с API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>Авторизация<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Большинству команд API требуется авторизация. Для этого команды требуют в качестве обязательного параметра так называемый авторизационный токен — массив байтов, однозначно идентифицирующий пользователя. Кроме того, во все методы интеграторского интерфейса требуется передавать так называемый <strong>&#8220;ключ разработчика&#8221;</strong> — уникальный строковый идентификатор интегратора. Интегратор не должен передавать свой &#8220;ключ разработчика&#8221; третьим лицам.</p>
 <p>Для передачи авторизационной информации с каждым запросом используется стандатрный HTTP-заголовок Authorization. Схема аутентификации, используемая системой EDI.Контур, называется KonturEdiAuth. Для нее определены следующие параметры:</p>
 <blockquote>
@@ -256,6 +264,39 @@
 <div class="admonition important">
 <p class="first admonition-title">Важно</p>
 <p class="last">Нет необходимости авторизоваться перед каждым запросом. Авторизационный токен действителен до 12 часов, поэтому кэшируйте его.  При устаревании токена в ответ на запрос сервер возвращает HTTP-код 401 (Unauthorized). В этом случае повторите запрос <a class="reference internal" href="methods/Authenticate.html"><span class="doc">Authenticate</span></a> и используйте новый токен.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Предварительные настройки<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Перед началом работы с EDI-сообщениями проверьте и сохраните данные, которые потребуются в дальнейшем:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>GetAccessiblePartiesInfo</strong>: метод возвращает информацию о доступных пользователю организациях. Идентификатор <strong>partyId</strong> нужен для получения идентификатора ящика организации, из которого вы будете отправлять сообщения и читать события о входящих и исходящих сообщениях</li>
+<li><strong>GetMainApiBox</strong>: метод возвращает идентификатор ящика организации <strong>boxId</strong>. Данный идентификатор вы будете использовать в качестве обязательного параметра при отправке сообщений (метод SendMessage) и чтения событий в ящике (метод GetEvents)</li>
+<li><strong>GetBoxDocumentsSettings</strong>: метод возвращает информацию о доступных для получения и отправки типов сообщений по каждому из контрагентов организации</li>
+</ul>
+</div></blockquote>
+<p>Полученные данные меняются в исключительных случаях (например, при смене GLN или изменении цепочки сообщений с партнером), поэтому нет необходимости запрашивать их регулярно.</p>
+</div>
+<div class="section" id="c-api">
+<h2>Cхема разового обращения к API<a class="headerlink" href="#c-api" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="docutils">
+<dt>Авторизация (см. раздел Авторизация) с использованием метода Authenticate</dt>
+<dd>Сохраните полученный авторизационный токен и используйте его в последующих запросах,  в заголовке Authorization.</dd>
+<dt>Отправка сообщений</dt>
+<dd>Отправьте новые сообщения, используя метод SendMessage.</dd>
+<dt>Получение новых событий в ящике с использованием метода GetEvents.</dt>
+<dd>Укажите в  параметре exclusiveEventId идентификатор последнего обработанного события.</dd>
+<dt>Обработка событий</dt>
+<dd><ul class="first last simple">
+<li>Получите входящие сообщения методом GetInboxMessage</li>
+<li>Обновите текущее состояние исходящих сообщений, на основании данных в соответствующих событиях.</li>
+<li>Повторите запрос GetEvents, указав в exclusiveEventId идентификатор последнего обработанного события lastEventId . Если значение lastEventId повторяется - значит лента событий, на данный момент, прочитана до конца.</li>
+</ul>
+</dd>
+<dt>Запись идентификатора lastEventId последнего обработанного события</dt>
+<dd>Используйте записанное значение в следующей сессии.</dd>
+</dl>
 </div>
 </div>
 

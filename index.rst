@@ -11,7 +11,7 @@
    :caption: Содержание:
    
    DataModel
-   Authorization
+   OperationScheme
    Methods
    Structures
    Enums

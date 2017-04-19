@@ -16,6 +16,7 @@
    :caption: Структуры данных
    
 	BankAccount <structures/BankAccount>
+	BasicMessageMeta <structures/BasicMessageMeta>
 	BoxDocumentSettings <structures/BoxDocumentSettings>
 	BoxesInfo <structures/BoxesInfo>
 	BoxEvent <structures/BoxEvent>
@@ -36,8 +37,7 @@
 	Organization <structures/Organization>
 	OrganizationCatalogueInfo <structures/OrganizationCatalogueInfo>
 	OrganizationInfo <structures/OrganizationInfo>
-	OutboxMessageEntity <structures/OutboxMessageEntity>
-	OutboxMessageMeta <structures/OutboxMessageMeta>
+	OutboxMessageEntity <structures/OutboxMessageEntity>	
 	Parties <structures/Parties>
 	PartiesInfo <structures/PartiesInfo>
 	Partner <structures/Partner>

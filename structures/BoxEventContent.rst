@@ -26,3 +26,4 @@ BoxEventContent
 	NewInboxMessageEventContent <events/NewInboxMessageEventContent>
 	NewOutboxMessageEventContent <events/NewOutboxMessageEventContent>
 	RecognizeMessageEventContent <events/RecognizeMessageEventContent>
+	AmendmentRequestedEventContent <events/AmendmentRequestedEventContent>

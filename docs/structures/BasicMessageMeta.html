@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>OutboxMessageMeta &mdash; Документация API Контур.EDI </title>
+  <title>BasicMessageMeta &mdash; Документация API Контур.EDI </title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация API Контур.EDI " href="../index.html"/>
         <link rel="up" title="Структуры данных" href="../Structures.html"/>
-        <link rel="next" title="Parties" href="Parties.html"/>
-        <link rel="prev" title="OutboxMessageEntity" href="OutboxMessageEntity.html"/> 
+        <link rel="next" title="BoxDocumentsSettings" href="BoxDocumentSettings.html"/>
+        <link rel="prev" title="BankAccount" href="BankAccount.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,7 +89,12 @@
               <p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../DataModel.html">Модель данных</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Authorization.html">Авторизация</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OperationScheme.html">Порядок работы с API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OperationScheme.html#id1">Авторизация</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OperationScheme.html#id2">Предварительные настройки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OperationScheme.html#c-api">Cхема разового обращения к API</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Methods.html">Поддерживаемые операции</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../methods/Authenticate.html">             Authenticate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../methods/GetAccessiblePartiesInfo.html">             GetAccessiblePartiesInfo</a></li>
@@ -108,6 +113,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Structures.html">Структуры данных</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="BankAccount.html">     BankAccount</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BoxesInfo.html">     BoxesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BoxEvent.html">     BoxEvent</a></li>
@@ -132,6 +138,7 @@
 <li class="toctree-l3"><a class="reference internal" href="events/NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="events/NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="events/RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="events/AmendmentRequestedEventContent.html">     AmendmentRequestedEventContent</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="BoxInfo.html">     BoxInfo</a></li>
@@ -150,7 +157,6 @@
 <li class="toctree-l2"><a class="reference internal" href="OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OrganizationInfo.html">     OrganizationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">     OutboxMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Parties.html">     Parties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PartiesInfo.html">     PartiesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Partner.html">     Partner</a></li>
@@ -218,7 +224,7 @@
         
           <li><a href="../Structures.html">Структуры данных</a> &raquo;</li>
         
-      <li>OutboxMessageMeta</li>
+      <li>BasicMessageMeta</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -235,21 +241,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="outboxmessagemeta">
-<h1>OutboxMessageMeta<a class="headerlink" href="#outboxmessagemeta" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OutboxMessageMeta</span> <span class="p">{</span>
+  <div class="section" id="basicmessagemeta">
+<h1>BasicMessageMeta<a class="headerlink" href="#basicmessagemeta" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BasicMessageMeta</span> <span class="p">{</span>
         <span class="n">BoxId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">MessageId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">DocumentCirculationId</span><span class="p">:</span> <span class="kt">string</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Метаинформация исходящего сообщения:</p>
+<p>Метаинформация сообщения:</p>
 <blockquote>
 <div><ul class="simple">
-<li>BoxId – идентификатор ящика клиента, из которого сообщение отправлено.</li>
-<li>MessageId – идентификатор исходящего сообщения.</li>
-<li>DocumentCirculationId – внутренний идентификатор исходящего сообщения.</li>
+<li>BoxId – идентификатор ящика клиента, в которое пришло сообщение или из которого сообщение было отправлено.</li>
+<li>MessageId – идентификатор сообщения.</li>
+<li>DocumentCirculationId – внутренний идентификатор сообщения.</li>
 </ul>
 </div></blockquote>
 </div>
@@ -264,10 +270,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Parties.html" class="btn btn-neutral float-right" title="Parties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="BoxDocumentSettings.html" class="btn btn-neutral float-right" title="BoxDocumentsSettings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="OutboxMessageEntity.html" class="btn btn-neutral" title="OutboxMessageEntity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BankAccount.html" class="btn btn-neutral" title="BankAccount" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

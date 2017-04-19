@@ -1,23 +1,24 @@
-MessageDiadocRevocationAcceptedForBuyerEventContent
-====================================================
+AmendmentRequestedEventContent
+============================================
 
 .. code-block:: c#
 
-	class MessageDiadocRevocationAcceptedForBuyerEventContent {
-		AcceptedRevocationInfo: AcceptedRevocationInfo,
+	class AmendmentRequestedEventContent {
+		AmendmentRequestMessage: string,
 		DiadocBoxId: string,
 		InvoiceId: string,
 		MessageId: string,
 		Torg12Id: string,
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
+		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		InboxMessageMeta: BasicMessageMeta
+		MessageMeta: BasicMessageMeta
 	}
 	
-Информация о новом событии в ящике получателя - успешном аннулировании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic. Соответствует BoxEventType = DiadocRevocationAcceptedForBuyer.
+Информация о новом событии в ящике - поступлении уведомления об уточнении документа, сформированного на основании исходящего Invoic. Соответствует BoxEventType = AmendmentRequested.
 
- - AcceptedRevocationInfo – информация об аннулированном документе.
+ - AmendmentRequestMessage – текст уведомления об уточнении.
  - DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.
  - InvoiceId – идентификатор пришедшего счета-фактуры.
  - MessageId – идентификатор сообщения в Диадоке.
@@ -26,4 +27,4 @@ MessageDiadocRevocationAcceptedForBuyerEventContent
  - UniversalTransferDocumentId – идентификатор пришедшего УПД.
  - UniversalCorrectionDocumentId – идентификатор пришедшего УКД.
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
- - InboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` входящего сообщения Invoic.
+ - MessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` сообщения Invoic.

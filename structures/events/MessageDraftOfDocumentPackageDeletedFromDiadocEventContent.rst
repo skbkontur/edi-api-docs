@@ -4,7 +4,7 @@ MessageDraftOfDocumentPackageDeletedFromDiadocEventContent
 .. code-block:: c#
 
 	class MessageDraftOfDocumentPackageDeletedFromDiadocEventContent {
-		OutboxMessageMeta: OutboxMessageMeta,
+		OutboxMessageMeta: BasicMessageMeta,
 		DiadocBoxId: string,
 		InvoiceId: string,
 		MessageId: string,
@@ -16,7 +16,7 @@ MessageDraftOfDocumentPackageDeletedFromDiadocEventContent
 
 Информация о новом событии - удалении отправителем черновиков счета-фактуры, ТОРГ-12, сформированных на основании исходящего Invoic. Соответствует BoxEventType = DraftOfDocumentPackageDeletedFromDiadoc.
 
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` отправленного сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` отправленного сообщения Invoic.
  - DiadocBoxId – идентификатор ящика в Диадоке, из которого удалены черновики документов.
  - InvoiceId – идентификатор удаленного счета-фактуры.
  - MessageId – идентификатор сообщения в Диадоке.

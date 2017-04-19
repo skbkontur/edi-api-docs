@@ -89,7 +89,12 @@
               <p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../DataModel.html">Модель данных</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Authorization.html">Авторизация</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../OperationScheme.html">Порядок работы с API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../OperationScheme.html#id1">Авторизация</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OperationScheme.html#id2">Предварительные настройки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OperationScheme.html#c-api">Cхема разового обращения к API</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../Methods.html">Поддерживаемые операции</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../methods/Authenticate.html">             Authenticate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../methods/GetAccessiblePartiesInfo.html">             GetAccessiblePartiesInfo</a></li>
@@ -108,6 +113,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../Structures.html">Структуры данных</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../BankAccount.html">     BankAccount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxesInfo.html">     BoxesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxEvent.html">     BoxEvent</a></li>
@@ -132,6 +138,7 @@
 <li class="toctree-l3"><a class="reference internal" href="NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AmendmentRequestedEventContent.html">     AmendmentRequestedEventContent</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxInfo.html">     BoxInfo</a></li>
@@ -150,7 +157,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../OrganizationInfo.html">     OrganizationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../OutboxMessageMeta.html">     OutboxMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Parties.html">     Parties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PartiesInfo.html">     PartiesInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Partner.html">     Partner</a></li>
@@ -241,7 +247,7 @@
 <h1>MessageDraftOfDocumentPackageSignedByMeEventContent<a class="headerlink" href="#messagedraftofdocumentpackagesignedbymeeventcontent" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span>
 <span class="nc">MessageDraftOfDocumentPackageSignedByMeEventContent</span> <span class="p">{</span>
-        <span class="n">OutboxMessageMeta</span><span class="p">:</span> <span class="n">OutboxMessageMeta</span><span class="p">,</span>
+        <span class="n">OutboxMessageMeta</span><span class="p">:</span> <span class="n">BasicMessageMeta</span><span class="p">,</span>
         <span class="n">DiadocBoxId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">InvoiceId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">MessageId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
@@ -255,7 +261,7 @@
 <p>Информация о новом событии в ящике отправителя - подписании и отправке черновиков счета-фактуры, ТОРГ-12, сформированных на основании исходящего Invoic. Соответствует BoxEventType = DraftOfDocumentPackageSignedByMe.</p>
 <blockquote>
 <div><ul class="simple">
-<li>OutboxMessageMeta – <a class="reference internal" href="../OutboxMessageMeta.html"><span class="doc">метаинформация</span></a> отправленного сообщения Invoic.</li>
+<li>OutboxMessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> отправленного сообщения Invoic.</li>
 <li>DiadocBoxId – идентификатор ящика в Диадоке, из которого отправлены подписанные документы.</li>
 <li>InvoiceId – идентификатор подписанного счета-фактуры.</li>
 <li>MessageId – идентификатор сообщения в Диадоке.</li>

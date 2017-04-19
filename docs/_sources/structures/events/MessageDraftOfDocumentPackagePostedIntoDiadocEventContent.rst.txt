@@ -4,7 +4,7 @@ MessageDraftOfDocumentPackagePostedIntoDiadocEventContent
 .. code-block:: c#
 
 	class MessageDraftOfDocumentPackagePostedIntoDiadocEventContent {
-		OutboxMessageMeta: OutboxMessageMeta,
+		OutboxMessageMeta: BasicMessageMeta,
 		DiadocBoxId: string,
 		InvoiceId: string,
 		MessageId: string,
@@ -16,7 +16,7 @@ MessageDraftOfDocumentPackagePostedIntoDiadocEventContent
 
 Информация о новом событии - формировании на основе исходящего Invoic черновиков счета-фактуры, ТОРГ-12 в Диадоке. Соответствует BoxEventType = DraftOfDocumentPackagePostedIntoDiadoc.
 
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` отправленного сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` отправленного сообщения Invoic.
  - DiadocBoxId – идентификатор ящика в Диадоке, в котором сформированы черновики документов.
  - InvoiceId – идентификатор черновика счета-фактуры.
  - MessageId – идентификатор сообщения в Диадоке.

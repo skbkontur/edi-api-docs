@@ -13,7 +13,7 @@ MessageDiadocRevocationAcceptedEventContent
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		OutboxMessageMeta: OutboxMessageMeta
+		OutboxMessageMeta: BasicMessageMeta
 	}
 	
 Информация о новом событии в ящике отправителя - успешном аннулировании ТОРГ-12 или счета-фактуры, сформированного на основании исходящего Invoic. Соответствует BoxEventType = DiadocRevocationAccepted.
@@ -27,4 +27,4 @@ MessageDiadocRevocationAcceptedEventContent
  - UniversalTransferDocumentId – идентификатор пришедшего УПД.
  - UniversalCorrectionDocumentId – идентификатор пришедшего УКД.
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` исходящего сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic.

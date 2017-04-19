@@ -4,7 +4,7 @@ MessageReceivedDiadocRoamingErrorEventContent
 .. code-block:: c#
 
 	class MessageReceivedDiadocRoamingErrorEventContent {
-		OutboxMessageMeta: OutboxMessageMeta,
+		OutboxMessageMeta: BasicMessageMeta,
 		Reason: string,
 		DiadocBoxId: string,
 		InvoiceId: string,
@@ -17,7 +17,7 @@ MessageReceivedDiadocRoamingErrorEventContent
 	
 Информация о новом событии - на стороне получателя были обнаружены ошибки в счете-фактуре, ТОРГ-12, сформированных на основании исходящего Invoic. Соответствует BoxEventType = ReceivedDiadocRoamingError.
 
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/OutboxMessageMeta>` исходящего сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic.
  - Reason – ошибки, обнаруженные в документах, не прошедших проверку у получателя.
  - DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.
  - InvoiceId – идентификатор пришедшего счета-фактуры.
