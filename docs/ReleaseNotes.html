@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Структуры данных &mdash; Документация API EDI.Контур </title>
+  <title>История изменений API &mdash; Документация API EDI.Контур </title>
   
 
   
@@ -38,8 +38,7 @@
               href="genindex.html"/>
         <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация API EDI.Контур " href="index.html"/>
-        <link rel="next" title="AcceptedRevocationInfo" href="structures/AcceptedRevocationInfo.html"/>
-        <link rel="prev" title="SendMessage" href="methods/SendMessage.html"/> 
+        <link rel="prev" title="Типы транспорта, используемые в ящиках" href="enums/TransportType.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -86,7 +85,7 @@
             
             
               <p class="caption"><span class="caption-text">Содержание:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="DataModel.html">Модель данных</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OperationScheme.html">Порядок работы с API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="OperationScheme.html#id1">Авторизация</a></li>
@@ -110,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="methods/SendMessage.html">             SendMessage</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Структуры данных</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Structures.html">Структуры данных</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
@@ -181,8 +180,8 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">История изменений:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ReleaseNotes.html">История изменений API</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">История изменений API</a></li>
 </ul>
 
             
@@ -227,7 +226,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Структуры данных</li>
+      <li>История изменений API</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -244,80 +243,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>Структуры данных<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Для описания структур используется понятие класса. Класс – объединение других классов или примитивных типов. Под примитивными типами понимается следующие типы:</p>
-<blockquote>
-<div><ul class="simple">
-<li>enum – перечисление: представляет собой фиксированный набор значений, сериализуется как строка, по написанию равная одному из значений,</li>
-<li>int – целое число,</li>
-<li>string – строка,</li>
-<li>dateTime – дата и время: сериализуется в строку согласно формату ISO 8601 (например: 2008-04-12T12:53Z),</li>
-<li>byte[] – массив байтов: cериализуется в base64-строку,</li>
-<li>bool – логический тип.</li>
+  <div class="section" id="api">
+<h1>История изменений API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>29.05.2017<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>У документации API EDI.Контур изменился интерфейс. В новом интерфейсе реализованы:</p>
+<ul class="simple">
+<li>удобное древовидное меню,</li>
+<li>система поиска по страницам,</li>
+<li>страница с описанием изменений.</li>
 </ul>
-<div class="toctree-wrapper compound" id="structures">
-<p class="caption"><span class="caption-text">Структуры данных</span><a class="headerlink" href="#structures" title="Постоянная ссылка на оглавление">¶</a></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxesInfo.html">     BoxesInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxEvent.html">     BoxEvent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxEventBatch.html">     BoxEventBatch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxEventContent.html">     BoxEventContent</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageCheckingFailEventContent.html">     MessageCheckingFailEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageCheckingOkEventContent.html">     MessageCheckingOkEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDeliveredEventContent.html">     MessageDeliveredEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDiadocRevocationAcceptedEventContent.html">     MessageDiadocRevocationAcceptedEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDiadocRevocationAcceptedForBuyerEventContent.html">     MessageDiadocRevocationAcceptedForBuyerEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByMeFailEventContent.html">     MessageDocumentPackageSignedByMeFailEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByMeOkEventContent.html">     MessageDocumentPackageSignedByMeOkEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByRecipientFailEventContent.html">     MessageDocumentPackageSignedByRecipientFailEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDocumentPackageSignedByRecipientOkEventContent.html">     MessageDocumentPackageSignedByRecipientOkEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageDeletedFromDiadocEventContent.html">     MessageDraftOfDocumentPackageDeletedFromDiadocEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackagePostedIntoDiadocEventContent.html">     MessageDraftOfDocumentPackagePostedIntoDiadocEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageSignedByMeEventContent.html">     MessageDraftOfDocumentPackageSignedByMeEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageDraftOfDocumentPackageSignedBySenderEventContent.html">     MessageDraftOfDocumentPackageSignedBySenderEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageReadByPartnerEventContent.html">     MessageReadByPartnerEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageReceivedDiadocRoamingErrorEventContent.html">     MessageReceivedDiadocRoamingErrorEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/MessageUndeliveredEventContent.html">     MessageUndeliveredEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/NewInboxMessageEventContent.html">     NewInboxMessageEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/NewOutboxMessageEventContent.html">     NewOutboxMessageEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/RecognizeMessageEventContent.html">     RecognizeMessageEventContent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structures/events/AmendmentRequestedEventContent.html">     AmendmentRequestedEventContent</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxInfo.html">     BoxInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/BoxSettings.html">     BoxSettings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/ContactInformation.html">     ContactInformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/DiadocUrls.html">     DiadocUrls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/DocumentDetails.html">     DocumentDetails</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/DocumentSettings.html">     DocumentSettings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/DocumentSettingsForPartner.html">     DocumentSettingsForPartner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/ForeignAddressInfo.html">     ForeignAddressInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/InboxMessageEntity.html">     InboxMessageEntity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/InboxMessageMeta.html">     InboxMessageMeta</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/IPInfo.html">     IPInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/MessageData.html">     MessageData</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/Organization.html">     Organization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/OrganizationCatalogueInfo.html">     OrganizationCatalogueInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/OrganizationInfo.html">     OrganizationInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/OutboxMessageEntity.html">     OutboxMessageEntity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/Parties.html">     Parties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/PartiesInfo.html">     PartiesInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/Partner.html">     Partner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/PartyAddress.html">     PartyAddress</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/PartyInfo.html">     PartyInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/RussianAddressInfo.html">     RussianAddressInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/RussianPartyInfo.html">     RussianPartyInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/ULInfo.html">     ULInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/UserInfo.html">     UserInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structures/UsersInfo.html">     UsersInfo</a></li>
-</ul>
+<p>Если вы заметили в документации ошибку, вы можете предложить ее исправление, нажав на ссылку &#8220;Edit on GitHub&#8221; на соответствующей странице.</p>
 </div>
-</div></blockquote>
 </div>
 
 
@@ -330,10 +267,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structures/AcceptedRevocationInfo.html" class="btn btn-neutral float-right" title="AcceptedRevocationInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="methods/SendMessage.html" class="btn btn-neutral" title="SendMessage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="enums/TransportType.html" class="btn btn-neutral" title="Типы транспорта, используемые в ящиках" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
