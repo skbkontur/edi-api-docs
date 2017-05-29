@@ -39,7 +39,7 @@
         <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация API Контур.EDI " href="../index.html"/>
         <link rel="up" title="Перечисления" href="../Enums.html"/>
-        <link rel="next" title="Направления отправки документов" href="DocumentDirection.html"/>
+        <link rel="next" title="Типы документов в Диадоке" href="DiadocDocumentType.html"/>
         <link rel="prev" title="Перечисления" href="../Enums.html"/> 
 
   
@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Structures.html">Структуры данных</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structures/BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -171,6 +172,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Enums.html">Перечисления</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MessageFormat.html">     MessageFormat</a></li>
@@ -259,7 +261,12 @@
         <span class="n">DraftOfDocumentPackageSignedBySender</span><span class="p">,</span>
         <span class="n">ReceivedDiadocRoamingError</span><span class="p">,</span>
         <span class="n">DiadocRevocationAccepted</span><span class="p">,</span>
-        <span class="n">DiadocRevocationAcceptedForBuyer</span>
+        <span class="n">DiadocRevocationAcceptedForBuyer</span><span class="p">,</span>
+        <span class="n">DocumentPackageSignedByRecipientOk</span><span class="p">,</span>
+        <span class="n">DocumentPackageSignedByMeOk</span><span class="p">,</span>
+        <span class="n">DocumentPackageSignedByRecipientFail</span><span class="p">,</span>
+        <span class="n">DocumentPackageSignedByMeFail</span><span class="p">,</span>
+        <span class="n">AmendmentRequested</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -275,7 +282,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="DocumentDirection.html" class="btn btn-neutral float-right" title="Направления отправки документов" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="DiadocDocumentType.html" class="btn btn-neutral float-right" title="Типы документов в Диадоке" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Enums.html" class="btn btn-neutral" title="Перечисления" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -10,5 +10,5 @@ Organization
 	
 Информация об организации или точке доставки/отгрузки:
 
- - OrganizationDate – дата начала работы с контрагентом.
+ - OrganizationDate – дата начала работы,
  - OrganizationInfo – информация об :doc:`организации или точке доставки/отгрузки <../structures/OrganizationInfo>`.

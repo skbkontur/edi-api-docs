@@ -8,7 +8,7 @@ DocumentSettingsForPartner
 		DocumentSettings: DocumentSettings[]
 	}
 
-Настройка возможности обмена документами с конкретным контрагентом:
+Настройки обмена документами с конкретным контрагентом:
 
- - Partner – :doc:`организация-контрагент <../structures/Partner>`.
- - DocumentSettings – :doc:`набор документов <../structures/DocumentSettings>`, которыми можно обмениваться с контрагентом с указанием контрагента.
+ - Partner – :doc:`организация-контрагент <../structures/Partner>`,
+ - DocumentSettings – :doc:`набор документов <../structures/DocumentSettings>`, которыми можно обмениваться с контрагентом.

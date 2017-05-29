@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Structures.html">Структуры данных</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -171,6 +172,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/MessageFormat.html">     MessageFormat</a></li>
@@ -257,13 +259,13 @@
 <p>Настройки ящика:</p>
 <blockquote>
 <div><ul class="simple">
-<li>TransportType – <a class="reference internal" href="../enums/TransportType.html"><span class="doc">тип транспорта, используемый в ящике</span></a>.</li>
-<li>IsMain – признак основного транспорта.</li>
-<li>DocumentTypes – <a class="reference internal" href="../enums/DocumentType.html"><span class="doc">типы сообщений</span></a>, настроенные для ящика. Если возвращено значение Any, это означает, что данный ящик соответствует настройкам &#8220;Транспорт по умолчанию&#8221;.</li>
-<li>CustomMessageFormats – <a class="reference internal" href="../enums/MessageFormat.html"><span class="doc">форматы сообщений</span></a>, настроенные для ящика. Если возвращено значение Any, это означает, что данный ящик соответствует настройкам &#8220;Транспорт по умолчанию&#8221;.</li>
-<li>InboxRelativePath – путь папки входящих сообщений на Ftp. Заполняется только в том случае, если тип транспорта - &#8220;Ftp&#8221; и ящик используется для входящих сообщений.</li>
-<li>OutboxRelativePath – путь папки исходящих сообщений на Ftp. Заполняется только в том случае, если тип транспорта - &#8220;Ftp&#8221; и ящик используется для исходящих сообщений.</li>
-<li>ProviderTransportBoxId – идентификатор ящика провайдера. Заполняется только в том случае, если тип транспорта - &#8220;Provider&#8221;.</li>
+<li>TransportType – <a class="reference internal" href="../enums/TransportType.html"><span class="doc">тип транспорта, используемый в ящике</span></a>,</li>
+<li>IsMain – признак основного транспорта,</li>
+<li>DocumentTypes – <a class="reference internal" href="../enums/DocumentType.html"><span class="doc">типы сообщений</span></a>, настроенные для ящика, значение &#8220;Any&#8221; означает, что данный ящик соответствует настройкам &#8220;Транспорт по умолчанию&#8221;,</li>
+<li>CustomMessageFormats – <a class="reference internal" href="../enums/MessageFormat.html"><span class="doc">форматы сообщений</span></a>, настроенные для ящика, значение &#8220;Any&#8221; означает, что данный ящик соответствует настройкам &#8220;Транспорт по умолчанию&#8221;,</li>
+<li>InboxRelativePath – путь папки входящих сообщений на Ftp: заполняется только в том случае, если тип транспорта - &#8220;Ftp&#8221; и ящик используется для входящих сообщений,</li>
+<li>OutboxRelativePath – путь папки исходящих сообщений на Ftp: заполняется только в том случае, если тип транспорта - &#8220;Ftp&#8221; и ящик используется для исходящих сообщений,</li>
+<li>ProviderTransportBoxId – идентификатор ящика провайдера: заполняется только в том случае, если тип транспорта - &#8220;Provider&#8221;.</li>
 </ul>
 </div></blockquote>
 </div>

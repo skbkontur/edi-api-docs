@@ -16,11 +16,11 @@ RussianAddressInfo
 	
 Российский адрес:
 
- - PostalCode – почтовый индекс.
- - RegionCode – код региона.
- - District – район.
- - City – город.
- - Village – населенный пункт.
- - Street – улица.
- - House – дом.
- - Flat – квартира/ офис.
+ - PostalCode – почтовый индекс,
+ - RegionCode – код региона в формате ISO,
+ - District – район,
+ - City – город,
+ - Village – населенный пункт,
+ - Street – улица,
+ - House – дом,
+ - Flat – квартира/офис.

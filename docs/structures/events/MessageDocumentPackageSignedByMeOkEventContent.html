@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../Structures.html">Структуры данных</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -171,6 +172,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/MessageFormat.html">     MessageFormat</a></li>
@@ -258,17 +260,17 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Информация о новом событии в ящике получателя - успешном подписании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.</p>
+<p>Информация о новом событии в ящике получателя - успешном подписании документов, сформированных на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.</p>
 <blockquote>
 <div><ul class="simple">
-<li>DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы.</li>
-<li>InvoiceId – идентификатор пришедшего счета-фактуры.</li>
-<li>MessageId – идентификатор сообщения в Диадоке.</li>
-<li>Torg12Id – идентификатор пришедшей ТОРГ-12.</li>
-<li>InvoiceCorrectionId – идентификатор пришедшего корректировочного счета-фактуры.</li>
-<li>UniversalTransferDocumentId – идентификатор пришедшего УПД.</li>
-<li>UniversalCorrectionDocumentId – идентификатор пришедшего УKД.</li>
-<li>DiadocUrls – <a class="reference internal" href="../DiadocUrls.html"><span class="doc">ссылки на документы в Диадоке</span></a>.</li>
+<li>DiadocBoxId – идентификатор ящика в Диадоке, в который пришли подписанные отправителем документы,</li>
+<li>InvoiceId – идентификатор пришедшего счета-фактуры,</li>
+<li>MessageId – идентификатор сообщения в Диадоке,</li>
+<li>Torg12Id – идентификатор пришедшей ТОРГ-12,</li>
+<li>InvoiceCorrectionId – идентификатор пришедшего корректировочного счета-фактуры,</li>
+<li>UniversalTransferDocumentId – идентификатор пришедшего УПД,</li>
+<li>UniversalCorrectionDocumentId – идентификатор пришедшего УKД,</li>
+<li>DiadocUrls – <a class="reference internal" href="../DiadocUrls.html"><span class="doc">ссылки на документы в Диадоке</span></a>,</li>
 <li>InboxMessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> входящего сообщения Invoic.</li>
 </ul>
 </div></blockquote>

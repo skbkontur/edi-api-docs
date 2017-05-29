@@ -38,7 +38,7 @@
               href="genindex.html"/>
         <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация API Контур.EDI " href="index.html"/>
-        <link rel="next" title="BankAccount" href="structures/BankAccount.html"/>
+        <link rel="next" title="AcceptedRevocationInfo" href="structures/AcceptedRevocationInfo.html"/>
         <link rel="prev" title="SendMessage" href="methods/SendMessage.html"/> 
 
   
@@ -111,6 +111,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Структуры данных</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -170,6 +171,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/MessageFormat.html">     MessageFormat</a></li>
@@ -243,16 +245,17 @@
 <p>Для описания структур используется понятие класса. Класс – объединение других классов или примитивных типов. Под примитивными типами понимается следующие типы:</p>
 <blockquote>
 <div><ul class="simple">
-<li>enum – перечисление. Фиксированный набор значений. Сериализуется как строка, по написанию равная одному из значений;</li>
-<li>int – целое число;</li>
-<li>string – строка;</li>
-<li>dateTime – дата и время. Сериализуется в строку согласно формату ISO 8601 (например: 2008-04-12T12:53Z);</li>
-<li>byte[] – массив байтов. Сериализуется в base64-строку;</li>
+<li>enum – перечисление: представляет собой фиксированный набор значений, сериализуется как строка, по написанию равная одному из значений,</li>
+<li>int – целое число,</li>
+<li>string – строка,</li>
+<li>dateTime – дата и время: сериализуется в строку согласно формату ISO 8601 (например: 2008-04-12T12:53Z),</li>
+<li>byte[] – массив байтов: cериализуется в base64-строку,</li>
 <li>bool – логический тип.</li>
 </ul>
 <div class="toctree-wrapper compound" id="structures">
 <p class="caption"><span class="caption-text">Структуры данных</span><a class="headerlink" href="#structures" title="Постоянная ссылка на оглавление">¶</a></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -323,7 +326,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structures/BankAccount.html" class="btn btn-neutral float-right" title="BankAccount" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="structures/AcceptedRevocationInfo.html" class="btn btn-neutral float-right" title="AcceptedRevocationInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="methods/SendMessage.html" class="btn btn-neutral" title="SendMessage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

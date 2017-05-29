@@ -111,6 +111,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Structures.html">Структуры данных</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structures/AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structures/BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -170,6 +171,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enums/MessageFormat.html">     MessageFormat</a></li>
@@ -269,34 +271,35 @@
 <div class="section" id="id2">
 <h2>Предварительные настройки<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Перед началом работы с EDI-сообщениями проверьте и сохраните данные, которые потребуются в дальнейшем:</p>
-<blockquote>
-<div><ul class="simple">
-<li><strong>GetAccessiblePartiesInfo</strong>: метод возвращает информацию о доступных пользователю организациях. Идентификатор <strong>partyId</strong> нужен для получения идентификатора ящика организации, из которого вы будете отправлять сообщения и читать события о входящих и исходящих сообщениях</li>
-<li><strong>GetMainApiBox</strong>: метод возвращает идентификатор ящика организации <strong>boxId</strong>. Данный идентификатор вы будете использовать в качестве обязательного параметра при отправке сообщений (метод SendMessage) и чтения событий в ящике (метод GetEvents)</li>
-<li><strong>GetBoxDocumentsSettings</strong>: метод возвращает информацию о доступных для получения и отправки типов сообщений по каждому из контрагентов организации</li>
-</ul>
-</div></blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="methods/GetAccessiblePartiesInfo.html"><span class="doc">GetAccessiblePartiesInfo</span></a>:</dt>
+<dd>метод возвращает информацию о доступных пользователю организациях. Идентификатор организации <strong>partyId</strong> используется как входной параметр в следующем методе, а также в методах, предназначенных для получения информации об организации: <a class="reference internal" href="methods/GetPartyInfo.html"><span class="doc">GetPartyInfo</span></a>, <a class="reference internal" href="methods/GetUsersInfo.html"><span class="doc">GetUsersInfo</span></a>, <a class="reference internal" href="methods/GetOrganizationCatalogueInfo.html"><span class="doc">GetOrganizationCatalogueInfo</span></a>.</dd>
+<dt><a class="reference internal" href="methods/GetMainApiBox.html"><span class="doc">GetMainApiBox</span></a>:</dt>
+<dd>метод возвращает <strong>boxId</strong> &#8211; идентификатор ящика организации. Данный идентификатор вы будете использовать в качестве обязательного параметра при отправке сообщений (метод <a class="reference internal" href="methods/SendMessage.html"><span class="doc">SendMessage</span></a>) и чтении событий в ящике (метод <a class="reference internal" href="methods/GetEvents.html"><span class="doc">GetEvents</span></a>).</dd>
+<dt><a class="reference internal" href="methods/GetBoxDocumentsSettings.html"><span class="doc">GetBoxDocumentsSettings</span></a>:</dt>
+<dd>метод возвращает информацию о доступных для получения и отправки типов сообщений по каждому из контрагентов организации.</dd>
+</dl>
 <p>Полученные данные меняются в исключительных случаях (например, при смене GLN или изменении цепочки сообщений с партнером), поэтому нет необходимости запрашивать их регулярно.</p>
 </div>
 <div class="section" id="c-api">
 <h2>Cхема разового обращения к API<a class="headerlink" href="#c-api" title="Ссылка на этот заголовок">¶</a></h2>
-<dl class="docutils">
-<dt>Авторизация (см. раздел Авторизация) с использованием метода Authenticate</dt>
-<dd>Сохраните полученный авторизационный токен и используйте его в последующих запросах,  в заголовке Authorization.</dd>
-<dt>Отправка сообщений</dt>
-<dd>Отправьте новые сообщения, используя метод SendMessage.</dd>
-<dt>Получение новых событий в ящике с использованием метода GetEvents.</dt>
-<dd>Укажите в  параметре exclusiveEventId идентификатор последнего обработанного события.</dd>
-<dt>Обработка событий</dt>
-<dd><ul class="first last simple">
-<li>Получите входящие сообщения методом GetInboxMessage</li>
-<li>Обновите текущее состояние исходящих сообщений, на основании данных в соответствующих событиях.</li>
-<li>Повторите запрос GetEvents, указав в exclusiveEventId идентификатор последнего обработанного события lastEventId . Если значение lastEventId повторяется - значит лента событий, на данный момент, прочитана до конца.</li>
-</ul>
-</dd>
-<dt>Запись идентификатора lastEventId последнего обработанного события</dt>
-<dd>Используйте записанное значение в следующей сессии.</dd>
-</dl>
+<ol class="arabic">
+<li><p class="first"><strong>Авторизация:</strong> получите авторизационный токен, сохраните его и используйте его в последующих запросах  в заголовке <code class="docutils literal"><span class="pre">Authorization</span></code>.</p>
+</li>
+<li><p class="first"><strong>Отправка сообщений</strong>: отправьте сообщения, используя метод <a class="reference internal" href="methods/SendMessage.html"><span class="doc">SendMessage</span></a>.</p>
+</li>
+<li><p class="first"><strong>Получение новых событий</strong>: обработка новых событий в ящике производится в несколько этапов.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Получите новые события с помощью метода <a class="reference internal" href="methods/GetEvents.html"><span class="doc">GetEvents</span></a>, в параметре <strong>exclusiveEventId</strong> укажите идентификатор последнего обработанного события. Вам вернется список новых событий и идентификатор последнего обработанного события <strong>lastEventId</strong>.</li>
+<li>Обновите текущее состояние исходящих сообщений на основании данных в соответствующих событиях.</li>
+<li>Получите входящие сообщения методом <a class="reference internal" href="methods/GetInboxMessage.html"><span class="doc">GetInboxMessage</span></a> для всех событий с типом <em>NewInboxMessage</em>.</li>
+<li>Повторите запрос GetEvents, указав в <strong>exclusiveEventId</strong> идентификатор последнего обработанного события <strong>lastEventId</strong>. Повторяйте процесс до тех пор, пока не прочитаете ленту до конца, т.е. пока список полученных событий не станет пустым.</li>
+<li>Сохраните <strong>lastEventId</strong> и используйте для получения событий в следующей сессии.</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
 </div>
 </div>
 

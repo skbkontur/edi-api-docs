@@ -40,7 +40,7 @@
     <link rel="top" title="Документация API Контур.EDI " href="../index.html"/>
         <link rel="up" title="Структуры данных" href="../Structures.html"/>
         <link rel="next" title="BasicMessageMeta" href="BasicMessageMeta.html"/>
-        <link rel="prev" title="Структуры данных" href="../Structures.html"/> 
+        <link rel="prev" title="AcceptedRevocationInfo" href="AcceptedRevocationInfo.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../Structures.html">Структуры данных</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -171,6 +172,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../enums/MessageFormat.html">     MessageFormat</a></li>
@@ -245,6 +247,7 @@
 <h1>BankAccount<a class="headerlink" href="#bankaccount" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span> <span class="p">{</span>
         <span class="n">BankAccountNumber</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
+        <span class="n">CorrespondentAccountNumber</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">BankId</span><span class="p">:</span> <span class="kt">string</span><span class="p">,</span>
         <span class="n">BankName</span><span class="p">:</span> <span class="kt">string</span>
 <span class="p">}</span>
@@ -253,9 +256,9 @@
 <p>Банковские реквизиты:</p>
 <blockquote>
 <div><ul class="simple">
-<li>BankAccountNumber – расчётный счёт.</li>
-<li>CorrespondentAccountNumber – корр. счёт.</li>
-<li>BankId – БИК банка.</li>
+<li>BankAccountNumber – расчётный счёт,</li>
+<li>CorrespondentAccountNumber – корр. счёт,</li>
+<li>BankId – БИК банка,</li>
 <li>BankName – наименование банка.</li>
 </ul>
 </div></blockquote>
@@ -274,7 +277,7 @@
         <a href="BasicMessageMeta.html" class="btn btn-neutral float-right" title="BasicMessageMeta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Structures.html" class="btn btn-neutral" title="Структуры данных" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="AcceptedRevocationInfo.html" class="btn btn-neutral" title="AcceptedRevocationInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

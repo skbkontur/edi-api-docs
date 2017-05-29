@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../Structures.html">Структуры данных</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../AcceptedRevocationInfo.html">     AcceptedRevocationInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BankAccount.html">     BankAccount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BasicMessageMeta.html">     BasicMessageMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../BoxDocumentSettings.html">     BoxDocumentSettings</a></li>
@@ -171,6 +172,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Enums.html">Перечисления</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/BoxEventType.html">     BoxEventType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../enums/DiadocDocumentType.html">     DiadocDocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/DocumentDirection.html">     DocumentDirection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/DocumentType.html">     DocumentType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../enums/MessageFormat.html">     MessageFormat</a></li>
@@ -255,9 +257,9 @@
 <p>Информация о новом событии - исходящее сообщение не прошло проверку на стороне получателя. Соответствует BoxEventType = MessageCheckingFail.</p>
 <blockquote>
 <div><ul class="simple">
-<li>OutboxMessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> проверенного сообщения.</li>
-<li>Errors – ошибки, обнаруженные в сообщении, не прошедшем проверку.</li>
-<li>ReportNumber – номер статусного сообщения, соответствующего данному событию. Актуален только для статусных отправляемых при схеме MetroOkNotOk.</li>
+<li>OutboxMessageMeta – <a class="reference internal" href="../BasicMessageMeta.html"><span class="doc">метаинформация</span></a> проверенного сообщения,</li>
+<li>Errors – ошибки, обнаруженные в сообщении, не прошедшем проверку,</li>
+<li>ReportNumber – номер статусного сообщения, соответствующего данному событию: актуален только для статусных сообщений, отправляемых по схеме с формированием документов после проверки сообщения Invoic.</li>
 </ul>
 </div></blockquote>
 </div>

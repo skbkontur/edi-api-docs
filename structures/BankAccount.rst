@@ -5,6 +5,7 @@ BankAccount
 
 	class BankAccount {
 		BankAccountNumber: string,
+		CorrespondentAccountNumber: string,
 		BankId: string,
 		BankName: string
 	}
@@ -12,7 +13,7 @@ BankAccount
 	
 Банковские реквизиты:
 
- - BankAccountNumber – расчётный счёт.
- - CorrespondentAccountNumber – корр. счёт.
- - BankId – БИК банка.
+ - BankAccountNumber – расчётный счёт,
+ - CorrespondentAccountNumber – корр. счёт,
+ - BankId – БИК банка,
  - BankName – наименование банка.

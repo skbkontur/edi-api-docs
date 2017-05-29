@@ -7,6 +7,7 @@
    :caption: Перечисления
    
 	BoxEventType <enums/BoxEventType>
+	DiadocDocumentType <enums/DiadocDocumentType>
 	DocumentDirection <enums/DocumentDirection>
 	DocumentType <enums/DocumentType>
 	MessageFormat <enums/MessageFormat>

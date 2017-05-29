@@ -12,7 +12,7 @@ IPInfo
 	
 Реквизиты физического лица:
 
- - Inn – ИНН.
- - FirstName – имя.
- - MiddleName – отчество.
+ - Inn – ИНН,
+ - FirstName – имя,
+ - MiddleName – отчество,
  - LastName – фамилия.

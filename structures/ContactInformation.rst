@@ -12,7 +12,7 @@ ContactInformation
 	
 Контактная информация:
 
- - Name – ФИО.
- - Phone – номер телефона.
- - Fax – факс.
- - Email – email-адрес.
+ - Name – ФИО,
+ - Phone – номер телефона,
+ - Fax – факс,
+ - Email – email.

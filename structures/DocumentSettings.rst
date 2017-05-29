@@ -10,5 +10,5 @@ DocumentSettings
 
 Атомарная настройка возможности отправлять/получать документ определенного типа:
 
- - DocumentType – :doc:`тип документа <../enums/DocumentType>`.
+ - DocumentType – :doc:`тип документа <../enums/DocumentType>`,
  - DocumentDirection – :doc:`направление документа <../enums/DocumentDirection>`.

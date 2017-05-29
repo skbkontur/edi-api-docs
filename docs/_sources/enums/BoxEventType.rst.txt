@@ -19,5 +19,10 @@
 		DraftOfDocumentPackageSignedBySender,
 		ReceivedDiadocRoamingError,
 		DiadocRevocationAccepted,
-		DiadocRevocationAcceptedForBuyer
+		DiadocRevocationAcceptedForBuyer,
+		DocumentPackageSignedByRecipientOk,
+		DocumentPackageSignedByMeOk,
+		DocumentPackageSignedByRecipientFail,
+		DocumentPackageSignedByMeFail,
+		AmendmentRequested
 	}

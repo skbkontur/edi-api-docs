@@ -10,5 +10,5 @@ BoxEventBatch
 	
 Набор событий:
 
- - Events – список :doc:`событий <../structures/BoxEvent>`.
- - LastEventId – идентификатор последнего события в наборе. В следующий вызов метода :doc:`GetEvents <../methods/GetEvents>` необходимо передать именно его.
+ - Events – список :doc:`событий <../structures/BoxEvent>`,
+ - LastEventId – идентификатор последнего события в наборе: при следующем вызове метода :doc:`GetEvents <../methods/GetEvents>` необходимо передать именно его.

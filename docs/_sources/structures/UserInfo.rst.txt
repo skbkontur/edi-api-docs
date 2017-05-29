@@ -9,4 +9,4 @@ UserInfo
 	
 Информация о пользователе:
 
- - Email – email-адрес.
+ - Email – email.
