@@ -24,5 +24,6 @@
 		DocumentPackageSignedByMeOk,
 		DocumentPackageSignedByRecipientFail,
 		DocumentPackageSignedByMeFail,
-		AmendmentRequested
+		AmendmentRequested,
+		ProcessingTimesReport
 	}
