@@ -248,7 +248,7 @@
 <h1>Порядок работы с API<a class="headerlink" href="#api" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="id1">
 <h2>Авторизация<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Большинству команд API требуется авторизация. Для этого команды требуют в качестве обязательного параметра так называемый авторизационный токен — массив байтов, однозначно идентифицирующий пользователя. Кроме того, во все методы интеграторского интерфейса требуется передавать так называемый <strong>&#8220;ключ разработчика&#8221;</strong> — уникальный строковый идентификатор интегратора. Интегратор не должен передавать свой &#8220;ключ разработчика&#8221; третьим лицам.</p>
+<p>Большинству команд API требуется авторизация. Для этого команды требуют в качестве обязательного параметра так называемый авторизационный токен — массив байтов, однозначно идентифицирующий пользователя. Кроме того, во все методы интеграторского интерфейса требуется передавать так называемый <strong>«ключ разработчика»</strong> — уникальный строковый идентификатор интегратора. Интегратор не должен передавать свой «ключ разработчика» третьим лицам.</p>
 <p>Для передачи авторизационной информации с каждым запросом используется стандатрный HTTP-заголовок Authorization. Схема аутентификации, используемая системой EDI.Контур, называется KonturEdiAuth. Для нее определены следующие параметры:</p>
 <blockquote>
 <div><ul class="simple">
@@ -258,7 +258,7 @@
 <li><strong>konturediauth_password</strong> служит для передачи пароля (используется только в момент получения авторизационного токена).</li>
 </ul>
 </div></blockquote>
-<p>Значения параметров отделяются от их имен символами &#8216;=&#8217;. Параметры разделяются символами &#8216;,&#8217;. Например:</p>
+<p>Значения параметров отделяются от их имен символами „=“. Параметры разделяются символами „,“. Например:</p>
 <div class="highlight-c#"><div class="highlight"><pre><span></span><span class="n">Authorization</span><span class="p">:</span> <span class="n">KonturEdiAuth</span> <span class="n">konturediauth_api_client_id</span><span class="p">=</span><span class="n">testClient</span><span class="p">-</span><span class="m">8</span><span class="n">ee1638deae84c86b8e2069955c2825a</span><span class="p">,</span>   <span class="n">konturediauth_token</span><span class="p">=</span><span class="m">3</span><span class="n">IU0iPhuhHPZ6lrlumGz4pICEedhQ1XmlMN1Pk8z0DJ51MXkcTi6Q3CODCC4xTMsjPFfhK6XM4kCJ4JJ42hlD499</span><span class="p">/</span><span class="n">Ui5WSq6lrPwcdp4IIKswVUwyE0ZiwhlpeOwRjNrvUX1yPrxr0dY8a0w8ePsc1DG8HAlZce8a0hZiWylMqu23d</span><span class="p">/</span><span class="n">vfzRFuA</span><span class="p">==</span>
 </pre></div>
 </div>
@@ -279,7 +279,7 @@
 <dt><a class="reference internal" href="methods/GetAccessiblePartiesInfo.html"><span class="doc">GetAccessiblePartiesInfo</span></a>:</dt>
 <dd>метод возвращает информацию о доступных пользователю организациях. Идентификатор организации <strong>partyId</strong> используется как входной параметр в следующем методе, а также в методах, предназначенных для получения информации об организации: <a class="reference internal" href="methods/GetPartyInfo.html"><span class="doc">GetPartyInfo</span></a>, <a class="reference internal" href="methods/GetUsersInfo.html"><span class="doc">GetUsersInfo</span></a>, <a class="reference internal" href="methods/GetOrganizationCatalogueInfo.html"><span class="doc">GetOrganizationCatalogueInfo</span></a>.</dd>
 <dt><a class="reference internal" href="methods/GetMainApiBox.html"><span class="doc">GetMainApiBox</span></a>:</dt>
-<dd>метод возвращает <strong>boxId</strong> &#8211; идентификатор ящика организации. Данный идентификатор вы будете использовать в качестве обязательного параметра при отправке сообщений (метод <a class="reference internal" href="methods/SendMessage.html"><span class="doc">SendMessage</span></a>) и чтении событий в ящике (метод <a class="reference internal" href="methods/GetEvents.html"><span class="doc">GetEvents</span></a>).</dd>
+<dd>метод возвращает <strong>boxId</strong> – идентификатор ящика организации. Данный идентификатор вы будете использовать в качестве обязательного параметра при отправке сообщений (метод <a class="reference internal" href="methods/SendMessage.html"><span class="doc">SendMessage</span></a>) и чтении событий в ящике (метод <a class="reference internal" href="methods/GetEvents.html"><span class="doc">GetEvents</span></a>).</dd>
 <dt><a class="reference internal" href="methods/GetBoxDocumentsSettings.html"><span class="doc">GetBoxDocumentsSettings</span></a>:</dt>
 <dd>метод возвращает информацию о доступных для получения и отправки типов сообщений по каждому из контрагентов организации.</dd>
 </dl>

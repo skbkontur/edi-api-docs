@@ -9,7 +9,8 @@ DiadocUrls
 		Torg12Url: string,
 		InvoiceCorrectionUrl: string,
 		UniversalTransferDocumentUrl: string,
-		UniversalCorrectionDocumentUrl: string
+		UniversalCorrectionDocumentUrl: string,
+		NonformalizedUrl: string
 	}
 	
 Ссылки на документы в Диадоке:
@@ -19,4 +20,5 @@ DiadocUrls
  - Torg12Url – ссылка на ТОРГ-12 в Диадоке,
  - InvoiceCorrectionUrl – ссылка на корректировочный счет-фактуру в Диадоке,
  - UniversalTransferDocumentUrl – ссылка на УПД в Диадоке,
- - UniversalCorrectionDocumentUrl – ссылка на УКД в Диадоке.
+ - UniversalCorrectionDocumentUrl – ссылка на УКД в Диадоке,
+ - NonformalizedUrl - ссылка на неформализованный документ в Диадоке
