@@ -27,3 +27,5 @@ BoxEventContent
 	NewOutboxMessageEventContent <events/NewOutboxMessageEventContent>
 	RecognizeMessageEventContent <events/RecognizeMessageEventContent>
 	AmendmentRequestedEventContent <events/AmendmentRequestedEventContent>
+    DiadocDocumentDeliveredEventContent <events/DiadocDocumentDeliveredEventContent>
+    ProcessingTimesReportEventContent <events/ProcessingTimesReportEventContent>

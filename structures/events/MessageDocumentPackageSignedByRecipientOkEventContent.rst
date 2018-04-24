@@ -12,10 +12,11 @@ MessageDocumentPackageSignedByRecipientOkEventContent
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		OutboxMessageMeta: BasicMessageMeta
+		OutboxMessageMeta: BasicMessageMeta,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 	
-Информация о новом событии в ящике отправителя - успешном подписании ТОРГ-12, счета-фактуры или УПД, сформированного на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.
+Информация о новом событии в ящике отправителя - успешном подписании ТОРГ-12, счета-фактуры или УПД, сформированного на основании исходящего Invoic, а также корректировочных документов, сформированных на основании исходящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientOk.
 
  - DiadocBoxId – идентификатор ящика в Диадоке, из которого отправлены подписанные документы,
  - InvoiceId – идентификатор отправленного счета-фактуры,
@@ -25,4 +26,5 @@ MessageDocumentPackageSignedByRecipientOkEventContent
  - UniversalTransferDocumentId – идентификатор отправленного УПД.
  - UniversalCorrectionDocumentId – идентификатор отправленного УKД,
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

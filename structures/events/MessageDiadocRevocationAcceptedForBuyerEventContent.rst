@@ -12,7 +12,8 @@ MessageDiadocRevocationAcceptedForBuyerEventContent
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		InboxMessageMeta: BasicMessageMeta
+		InboxMessageMeta: BasicMessageMeta,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 	
 Информация о новом событии в ящике получателя - успешном аннулировании документов, сформированных на основании входящего Invoic. Соответствует BoxEventType = DiadocRevocationAcceptedForBuyer.
@@ -26,4 +27,5 @@ MessageDiadocRevocationAcceptedForBuyerEventContent
  - UniversalTransferDocumentId – идентификатор пришедшего УПД,
  - UniversalCorrectionDocumentId – идентификатор пришедшего УКД,
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
- - InboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` входящего сообщения Invoic.
+ - InboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` входящего сообщения Invoic,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

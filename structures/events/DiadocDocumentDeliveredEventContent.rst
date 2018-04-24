@@ -1,25 +1,23 @@
-AmendmentRequestedEventContent
+DiadocDocumentDeliveredEventContent
 ============================================
 
 .. code-block:: c#
 
-	class AmendmentRequestedEventContent {
-		AmendmentRequestMessage: string,
+	class DiadocDocumentDeliveredEventContent {
 		DiadocBoxId: string,
-		InvoiceId: string,
 		MessageId: string,
+		InvoiceId: string,
 		Torg12Id: string,
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		MessageMeta: BasicMessageMeta,
+		OutboxMessageMeta: BasicMessageMeta
 		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 	
-Информация о новом событии в ящике - поступлении уведомления об уточнении документа, сформированного на основании исходящего Invoic. Соответствует BoxEventType = AmendmentRequested.
+Информация о новом событии в ящике - поступлении извещения о получении документа, сформированного на основании исходящего Invoic. Соответствует BoxEventType = DiadocDocumentDelivered.
 
- - AmendmentRequestMessage – текст уведомления об уточнении,
  - DiadocBoxId – идентификатор ящика в Диадоке, из которого были отправлены подписанные отправителем документы,
  - InvoiceId – идентификатор отправленного счета-фактуры,
  - MessageId – идентификатор сообщения в Диадоке,
@@ -28,5 +26,5 @@ AmendmentRequestedEventContent
  - UniversalTransferDocumentId – идентификатор отправленного УПД,
  - UniversalCorrectionDocumentId – идентификатор отправленного УКД,
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
- - MessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` сообщения Invoic,
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` сообщения Invoic.
  - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

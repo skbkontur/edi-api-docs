@@ -7,6 +7,7 @@ BoxEvent
 		BoxId: string,
 		PartyId: string,
 		EventId: string,
+		EventPointer: string,
 		EventDateTime: dateTime,
 		EventType: BoxEventType,
 		EventContent: BoxEventContent
@@ -17,6 +18,7 @@ BoxEvent
  - BoxId – идентификатор ящика,
  - PartyId – идентификатор организации, которой принадлежит ящик,
  - EventId – уникальный идентификатор события,
+ - EventPointer – указатель на событие,
  - EventDateTime – дата и время события,
  - EventType – :doc:`тип события <../enums/BoxEventType>`,
  - EventContent – :doc:`содержимое события <../structures/BoxEventContent>`.

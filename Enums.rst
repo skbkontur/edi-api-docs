@@ -13,3 +13,4 @@
 	MessageFormat <enums/MessageFormat>
 	PartyType <enums/PartyType>
 	TransportType <enums/TransportType>
+    UniversalDocumentFunctionType <enums/UniversalDocumentFunctionType>

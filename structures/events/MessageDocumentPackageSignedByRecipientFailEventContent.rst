@@ -12,10 +12,11 @@ MessageDocumentPackageSignedByRecipientFailEventContent
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
-		OutboxMessageMeta: BasicMessageMeta
+		OutboxMessageMeta: BasicMessageMeta,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 	
-Информация о новом событии в ящике отправителя - отказе в подписи документов, сформированных на основании входящего Invoic, а также корректировочных документов, сформированных на основании входящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientFail.
+Информация о новом событии в ящике отправителя - отказе в подписи документов, сформированных на основании исходящего Invoic, а также корректировочных документов, сформированных на основании исходящего Coinvoic. Соответствует BoxEventType = DocumentPackageSignedByRecipientFail.
 
  - DiadocBoxId – идентификатор ящика в Диадоке, из которого отправлены подписанные документы,
  - InvoiceId – идентификатор отправленного счета-фактуры,
@@ -25,4 +26,5 @@ MessageDocumentPackageSignedByRecipientFailEventContent
  - UniversalTransferDocumentId – идентификатор отправленного УПД,
  - UniversalCorrectionDocumentId – идентификатор отправленного УKД,
  - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
- - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic.
+ - OutboxMessageMeta – :doc:`метаинформация <../../structures/BasicMessageMeta>` исходящего сообщения Invoic,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

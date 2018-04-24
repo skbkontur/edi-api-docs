@@ -20,9 +20,14 @@
 		Retrec,
 		Retinv,
 		POrders,
+		Pricat,
 		PriceList,
+		Partin,
+		Delfor,
 		Invrpt,
-		Slsrpt
+		Slsrpt,
+		Iftmbf,
+		Iftmbc
 	}
 	
 Unknown и Any - специальные значения, возвращаемые в следующих случаях:

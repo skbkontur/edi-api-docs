@@ -12,7 +12,8 @@ MessageDraftOfDocumentPackagePostedIntoDiadocEventContent
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
 		UniversalCorrectionDocumentId: string,
-		DiadocUrls: DiadocUrls
+		DiadocUrls: DiadocUrls,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 
 Информация о новом событии - формировании на основе исходящего Invoic черновиков документов в Диадоке. Соответствует BoxEventType = DraftOfDocumentPackagePostedIntoDiadoc.
@@ -25,4 +26,5 @@ MessageDraftOfDocumentPackagePostedIntoDiadocEventContent
  - InvoiceCorrectionId – идентификатор черновика корректировочного счета-фактуры,
  - UniversalTransferDocumentId – идентификатор черновика УПД,
  - UniversalCorrectionDocumentId – идентификатор черновика УКД,
- - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
+ - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

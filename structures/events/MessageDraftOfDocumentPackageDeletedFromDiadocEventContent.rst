@@ -11,7 +11,8 @@ MessageDraftOfDocumentPackageDeletedFromDiadocEventContent
 		Torg12Id: string,
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
-		DiadocUrls: DiadocUrls
+		DiadocUrls: DiadocUrls,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 
 Информация о новом событии - удалении отправителем черновиков документов, сформированных на основании исходящего Invoic. Соответствует BoxEventType = DraftOfDocumentPackageDeletedFromDiadoc.
@@ -24,4 +25,5 @@ MessageDraftOfDocumentPackageDeletedFromDiadocEventContent
  - InvoiceCorrectionId – идентификатор удаленного корректировочного счета-фактуры,
  - UniversalTransferDocumentId – идентификатор удаленного УПД,
  - UniversalCorrectionDocumentId – идентификатор удаленного УКД,
- - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
+ - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.

@@ -28,6 +28,7 @@
 	ContactInformation <structures/ContactInformation>
 	DiadocUrls <structures/DiadocUrls>
 	DocumentDetails <structures/DocumentDetails>
+	DocumentId <structures/DocumentId>
 	DocumentSettings <structures/DocumentSettings>
 	DocumentSettingsForPartner <structures/DocumentSettingsForPartner>
 	ForeignAddressInfo <structures/ForeignAddressInfo>
@@ -44,6 +45,7 @@
 	Partner <structures/Partner>
 	PartyAddress <structures/PartyAddress>
 	PartyInfo <structures/PartyInfo>
+    ProcessingTimes <structures/ProcessingTimes>
 	RussianAddressInfo <structures/RussianAddressInfo>
 	RussianPartyInfo <structures/RussianPartyInfo>
 	ULInfo <structures/ULInfo>

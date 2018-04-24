@@ -9,8 +9,7 @@
 		KonturXml,
 		KorusXml,
 		Eancom2002,
-		EcrRusXml,
-		CisLinkXml
+		EcrRusXml		
 	}
 	
 Unknown и Any - специальные значения, возвращаемые в следующих случаях:

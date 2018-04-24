@@ -11,7 +11,8 @@ MessageDraftOfDocumentPackageSignedBySenderEventContent
 		Torg12Id: string,
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
-		DiadocUrls: DiadocUrls
+		DiadocUrls: DiadocUrls,
+		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
 	
 Информация о новом событии в ящике получателя - подписании и отправке черновиков документов, сформированных на основании входящего Invoic. Соответствует BoxEventType = DraftOfDocumentPackageSignedBySender.
@@ -24,4 +25,5 @@ MessageDraftOfDocumentPackageSignedBySenderEventContent
  - InvoiceCorrectionId – идентификатор пришедшего корректировочного счета-фактуры,
  - UniversalTransferDocumentId – идентификатор пришедшего УПД,
  - UniversalCorrectionDocumentId – идентификатор пришедшего УКД,
- - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`.
+ - DiadocUrls – :doc:`ссылки на документы в Диадоке <../../structures/DiadocUrls>`,
+ - UniversalDocumentFunction - :doc:`функция УПД <../../enums/UniversalDocumentFunctionType>` сообщения Invoic.
