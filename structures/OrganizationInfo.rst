@@ -12,7 +12,8 @@ OrganizationInfo
 		Chief: ContactInformation,
 		Bookkeeper: ContactInformation,
 		SalesAdministration: ContactInformation,
-		OrderContact: ContactInformation
+		OrderContact: ContactInformation,
+		LocalizationType: string
 	}
 	
 Реквизиты и адрес организации или точки доставки/отгрузки:
@@ -25,4 +26,5 @@ OrganizationInfo
  - Chief – :doc:`данные о руководителе <../structures/ContactInformation>`,
  - Bookkeeper – :doc:`данные о бухгалтере <../structures/ContactInformation>`,
  - SalesAdministration – :doc:`данные о менеджере <../structures/ContactInformation>`,
- - OrderContact – :doc:`данные о контактном лице <../structures/ContactInformation>`.
+ - OrderContact – :doc:`данные о контактном лице <../structures/ContactInformation>`,
+ - LocalizationType - тип организации. 
