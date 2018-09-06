@@ -6,9 +6,11 @@ OrganizationInfo
 	class OrganizationInfo {
 		Gln: string,
 		PartyAddress: PartyAddress,
+		GeoCoordinates: GeoCoordinates,
 		RussianPartyInfo: RussianPartyInfo,
 		BankAccount: BankAccount,
 		SupplierCodeInBuyerSystem: string,
+		BusinessEntityMercuryId: string,
 		Chief: ContactInformation,
 		Bookkeeper: ContactInformation,
 		SalesAdministration: ContactInformation,
@@ -20,9 +22,11 @@ OrganizationInfo
 
  - Gln – Gln,
  - PartyAddress – :doc:`адрес <../structures/PartyAddress>`,
+ - GeoCoordinates - :doc:`географические координаты<../structures/GeoCoordinates>`,
  - RussianPartyInfo – :doc:`реквизиты <../structures/RussianPartyInfo>`,
  - BankAccount – :doc:`банковские реквизиты <../structures/BankAccount>`,
  - SupplierCodeInBuyerSystem – дополнительный идентификатор,
+ - BusinessEntityMercuryId - идентификатор хозяйствующего субъекта в ФГИС Меркурий,
  - Chief – :doc:`данные о руководителе <../structures/ContactInformation>`,
  - Bookkeeper – :doc:`данные о бухгалтере <../structures/ContactInformation>`,
  - SalesAdministration – :doc:`данные о менеджере <../structures/ContactInformation>`,

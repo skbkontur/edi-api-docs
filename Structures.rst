@@ -32,6 +32,7 @@
 	DocumentSettings <structures/DocumentSettings>
 	DocumentSettingsForPartner <structures/DocumentSettingsForPartner>
 	ForeignAddressInfo <structures/ForeignAddressInfo>
+	GeoCoordinates <structures/GeoCoordinates>
 	InboxMessageEntity <structures/InboxMessageEntity>
 	InboxMessageMeta <structures/InboxMessageMeta>
 	IPInfo <structures/IPInfo>
