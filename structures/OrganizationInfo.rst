@@ -1,4 +1,4 @@
-OrganizationInfo
+﻿OrganizationInfo
 =================
 
 .. code-block:: c#
@@ -11,6 +11,7 @@ OrganizationInfo
 		BankAccount: BankAccount,
 		SupplierCodeInBuyerSystem: string,
 		BusinessEntityMercuryId: string,
+		AreaEntityMercuryId: string,
 		Chief: ContactInformation,
 		Bookkeeper: ContactInformation,
 		SalesAdministration: ContactInformation,
@@ -27,6 +28,7 @@ OrganizationInfo
  - BankAccount – :doc:`банковские реквизиты <../structures/BankAccount>`,
  - SupplierCodeInBuyerSystem – дополнительный идентификатор,
  - BusinessEntityMercuryId - идентификатор хозяйствующего субъекта в ФГИС Меркурий,
+ - AreaEntityMercuryId - идентификатор торговой площадки ФГИС Меркурий,
  - Chief – :doc:`данные о руководителе <../structures/ContactInformation>`,
  - Bookkeeper – :doc:`данные о бухгалтере <../structures/ContactInformation>`,
  - SalesAdministration – :doc:`данные о менеджере <../structures/ContactInformation>`,
