@@ -16,7 +16,8 @@
 		Bookkeeper: ContactInformation,
 		SalesAdministration: ContactInformation,
 		OrderContact: ContactInformation,
-		LocalizationType: string
+		LocalizationType: string,
+		FilialGln: string
 	}
 	
 Реквизиты и адрес организации или точки доставки/отгрузки:
@@ -33,4 +34,5 @@
  - Bookkeeper – :doc:`данные о бухгалтере <../structures/ContactInformation>`,
  - SalesAdministration – :doc:`данные о менеджере <../structures/ContactInformation>`,
  - OrderContact – :doc:`данные о контактном лице <../structures/ContactInformation>`,
- - LocalizationType - тип организации. 
+ - LocalizationType - тип организации,
+ - FilialGln - Gln филиала точки доставки.
