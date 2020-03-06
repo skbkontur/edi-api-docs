@@ -11,7 +11,10 @@ PartyInfo
 		Kpp: string,
 		PartyTypeCode: string,
 		DiadocOrgId: string,
-		OrganizationCatalogueUpdateTime: dateTime
+		OrganizationCatalogueUpdateTime: dateTime,
+		LicenseAgreementAccepted: bool,
+		BuyerBoxSelectionStrategy: BuyerBoxSelectionStrategy,
+		SupplierBoxSelectionStrategy: SupplierBoxSelectionStrategy
 	}
 	
 Реквизиты организации:
@@ -23,4 +26,7 @@ PartyInfo
  - Kpp – КПП,
  - PartyTypeCode – :doc:`тип организации <../enums/PartyType>`,
  - DiadocOrgId – идентификатор в Диадок,
- - OrganizationCatalogueUpdateTime – время последнего изменения реквизитов организации или ее структуры.
+ - OrganizationCatalogueUpdateTime – время последнего изменения реквизитов организации или ее структуры,
+ - LicenseAgreementAccepted - организация приняла публичную оферту,
+ - BuyerBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений сети <../enums/BuyerBoxSelectionStrategy>`,
+ - SupplierBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений поставщика <../enums/SupplierBoxSelectionStrategy>`.
