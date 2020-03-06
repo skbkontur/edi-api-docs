@@ -7,7 +7,8 @@ DocumentDetails
 		DocumentType: DocumentType,
 		DocumentIsTest: bool,
 		DocumentNumber: string,
-		DocumentDate: dateTime
+		DocumentDate: dateTime,
+		DeliveryPointGln: string
 	}
 	
 Информация о документе:
@@ -15,4 +16,5 @@ DocumentDetails
  - DocumentType – :doc:`тип документа <../enums/DocumentType>`,
  - DocumentIsTest – флаг, показывающий, что данный документ является тестовым,
  - DocumentNumber – номер документа,
- - DocumentDate – дата документа.
+ - DocumentDate – дата документа,
+ - DeliveryPointGln - GLN точки доставки, указанный в документе.
