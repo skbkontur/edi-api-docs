@@ -7,10 +7,12 @@
    :caption: Перечисления
    
 	BoxEventType <enums/BoxEventType>
+	BuyerBoxSelectionStrategy <enums/BuyerBoxSelectionStrategy>
 	DiadocDocumentType <enums/DiadocDocumentType>
 	DocumentDirection <enums/DocumentDirection>
 	DocumentType <enums/DocumentType>
 	MessageFormat <enums/MessageFormat>
 	PartyType <enums/PartyType>
+	SupplierBoxSelectionStrategy <enums/SupplierBoxSelectionStrategy>
 	TransportType <enums/TransportType>
     UniversalDocumentFunctionType <enums/UniversalDocumentFunctionType>
