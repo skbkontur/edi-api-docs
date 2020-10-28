@@ -1,5 +1,5 @@
 PartyInfo
-==========
+=========
 
 .. code-block:: c#
 
@@ -14,7 +14,8 @@ PartyInfo
 		OrganizationCatalogueUpdateTime: dateTime,
 		LicenseAgreementAccepted: bool,
 		BuyerBoxSelectionStrategy: BuyerBoxSelectionStrategy,
-		SupplierBoxSelectionStrategy: SupplierBoxSelectionStrategy
+		SupplierBoxSelectionStrategy: SupplierBoxSelectionStrategy,
+		PaidFeatures: PaidFeatureInfo[]
 	}
 	
 Реквизиты организации:
@@ -29,4 +30,5 @@ PartyInfo
  - OrganizationCatalogueUpdateTime – время последнего изменения реквизитов организации или ее структуры,
  - LicenseAgreementAccepted - организация приняла публичную оферту,
  - BuyerBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений сети <../enums/BuyerBoxSelectionStrategy>`,
- - SupplierBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений поставщика <../enums/SupplierBoxSelectionStrategy>`.
+ - SupplierBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений поставщика <../enums/SupplierBoxSelectionStrategy>`,
+ - PaidFeatures - список :doc:`платных услуг <../structures/PaidFeatureInfo>`. Эта информация доступна только для сотрудников организации, для остальных список будет пустой.

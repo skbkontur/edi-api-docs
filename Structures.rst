@@ -8,7 +8,8 @@
  - string – строка,
  - dateTime – дата и время: сериализуется в строку согласно формату ISO 8601 (например: 2008-04-12T12:53Z),
  - byte[] – массив байтов: cериализуется в base64-строку,
- - bool – логический тип.
+ - bool – логический тип,
+ - guid - уникальный идентификатор: сериализуется в строку согласно формату "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", где x - шестнадцатиричное число в нижнем регистре (например: 6f9619ff-8b86-d011-b42d-00cf4fc964ff).
  
  .. toctree::
    :name: structures
@@ -41,6 +42,8 @@
 	OrganizationCatalogueInfo <structures/OrganizationCatalogueInfo>
 	OrganizationInfo <structures/OrganizationInfo>
 	OutboxMessageEntity <structures/OutboxMessageEntity>	
+	PaidFeatureInfo <structures/PaidFeatureInfo>
+	PaidPeriod <structures/PaidPeriod>
 	Parties <structures/Parties>
 	PartiesInfo <structures/PartiesInfo>
 	Partner <structures/Partner>
