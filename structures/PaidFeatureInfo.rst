@@ -12,7 +12,7 @@ PaidFeatureInfo
 	
 Информация о платных услугах:
 
- - BillingAccountId - идентификатор аккаунта в Биллинге,
+ - BillingAccountId - идентификатор лицевого счета в системе Контур.Биллинг,
  - PaidFeatureType - :doc:`тип платной услуги <../enums/PaidFeatureType>`,
  - PaidPeriods - список :doc:`оплаченных периодов <../structures/PaidPeriod>`,
  - GracePeriodEnd - дата окончания действия льготного периода.

@@ -31,4 +31,4 @@ PartyInfo
  - LicenseAgreementAccepted - организация приняла публичную оферту,
  - BuyerBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений сети <../enums/BuyerBoxSelectionStrategy>`,
  - SupplierBoxSelectionStrategy - :doc:`cтратегия маршрутизации сообщений поставщика <../enums/SupplierBoxSelectionStrategy>`,
- - PaidFeatures - список :doc:`платных услуг <../structures/PaidFeatureInfo>`. Эта информация доступна только для сотрудников организации, для остальных список будет пустой.
+ - PaidFeatures - список :doc:`платных услуг <../structures/PaidFeatureInfo>`. В API эта информация доступна только для сотрудников организации, для остальных список будет пустой.
