@@ -10,6 +10,7 @@ DiadocUrls
 		InvoiceCorrectionUrl: string,
 		UniversalTransferDocumentUrl: string,
 		UniversalCorrectionDocumentUrl: string,
+		PriceListUrl: string,
 		NonformalizedUrl: string
 	}
 	
@@ -21,4 +22,5 @@ DiadocUrls
  - InvoiceCorrectionUrl – ссылка на корректировочный счет-фактуру в Диадоке,
  - UniversalTransferDocumentUrl – ссылка на УПД в Диадоке,
  - UniversalCorrectionDocumentUrl – ссылка на УКД в Диадоке,
+ - PriceListUrl - ссылка на ценовой лист в Диадоке,
  - NonformalizedUrl - ссылка на неформализованный документ в Диадоке
