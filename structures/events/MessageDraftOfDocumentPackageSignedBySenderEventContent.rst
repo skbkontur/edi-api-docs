@@ -11,6 +11,7 @@ MessageDraftOfDocumentPackageSignedBySenderEventContent
 		Torg12Id: string,
 		InvoiceCorrectionId: string,
 		UniversalTransferDocumentId: string,
+		UniversalCorrectionDocumentId: string,
 		DiadocUrls: DiadocUrls,
 		UniversalDocumentFunction: UniversalDocumentFunctionType
 	}
